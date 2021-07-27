@@ -1,5 +1,5 @@
 package trabalho_pratico;
 
-public class controler {
+public class BasicConsoler {
 
 }
