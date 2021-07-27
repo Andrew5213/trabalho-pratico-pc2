@@ -1,11 +1,15 @@
 package trabalho_pratico.controller;
 import java.util.ArrayList;
-public class paint {
+import trabalho_pratico.model.*;
+import trabalho_pratico.model.enums.OpcoesMenuEnum;
+import trabalho_pratico.view.BasicConsole;
+import trabalho_pratico.view.DesenhoBoard;
+public class Paint {
     private FiguraGeometrica[] vetor;
     private BasicConsole tela;
     private DesenhoBoard canvas;
 
-    public AlessioPaint(){
+    public Paint(){
         vetor= new FiguraGeometrica[5];
         tela = new BasicConsole();
         canvas = new DesenhoBoard();
