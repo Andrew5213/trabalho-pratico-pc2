@@ -1,14 +1,15 @@
 package trabalho_pratico.view;
 
-import java.util.Scanner;
-import trabalho_pratico.model.enums.OpcoesMenuEnum;
 import trabalho_pratico.model.Quadrado;
+import trabalho_pratico.model.enums.OpcoesMenuEnum;
+
+import java.util.Scanner;
 
 public class BasicConsole {
 
     protected Scanner in;
 
-    public BasicConsole(){
+    public BasicConsole() {
         in = new Scanner(System.in);
     }
 

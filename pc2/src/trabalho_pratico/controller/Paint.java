@@ -1,9 +1,13 @@
 package trabalho_pratico.controller;
-import java.util.ArrayList;
-import trabalho_pratico.model.*;
+import trabalho_pratico.model.FiguraGeometrica;
+import trabalho_pratico.model.Ponto;
+import trabalho_pratico.model.Quadrado;
+import trabalho_pratico.model.Retangulo;
 import trabalho_pratico.model.enums.OpcoesMenuEnum;
 import trabalho_pratico.view.BasicConsole;
 import trabalho_pratico.view.DesenhoBoard;
+
+import java.util.ArrayList;
 public class Paint {
     private FiguraGeometrica[] vetor;
     private BasicConsole tela;
@@ -85,19 +89,12 @@ public class Paint {
         lista.add(new Ponto());
         lista.add(new ArrayList());
 
-        //Ponto p = lista.get(2);
-//        Ponto p2 = (Ponto) lista.get(1);
-//        Object o = lista.get(2);
-//        if( o instanceof Ponto){
-//            Ponto p = (Ponto) o;
-//        }
 
         tela.showMsg("------------TESTE parametrico---------------");
 
         ArrayList<FiguraGeometrica> listaFig = new ArrayList();
         listaFig.add(new Quadrado());
-
-        //  listaFig.indexOf()
+        tela.showLnMsg("");
 
         tela.showMsg("------------FIM TESTE---------------");
     }
