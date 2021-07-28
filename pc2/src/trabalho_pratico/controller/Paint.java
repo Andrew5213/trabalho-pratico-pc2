@@ -14,7 +14,7 @@ public class Paint {
     private DesenhoBoard canvas;
 
     public Paint(){
-        vetor= new FiguraGeometrica[5];
+        vetor= new FiguraGeometrica[10];
         tela = new BasicConsole();
         canvas = new DesenhoBoard();
     }

@@ -1,6 +1,6 @@
-package paint_AndrewOficial;
+package paint_AndrewOficial.View;
 
-import paint_AndrewOficial.modelo.enums.MenuEnuns;
+import paint_AndrewOficial.View.enums.MenuEnuns;
 
 import java.util.Scanner;
 
@@ -44,6 +44,8 @@ public class MenuPrincipal {
                 return MenuEnuns.LISTAR;
             case 7:
                 return MenuEnuns.DESENHAR;
+            case 0:
+                return MenuEnuns.SAIR;
 
             default:
                 return MenuEnuns.SAIR;
