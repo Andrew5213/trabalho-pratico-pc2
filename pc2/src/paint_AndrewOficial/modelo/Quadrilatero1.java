@@ -2,6 +2,19 @@ package paint_AndrewOficial.modelo;
 
 public class Quadrilatero1 {
 protected int lateralsuperior,lateralinferior,lateralesquerda,lateraldireita;
+protected float perimetro , area ;
+
+    public float getPerimetro() {
+        return perimetro=lateraldireita+lateralesquerda+lateralinferior+lateralsuperior;
+    }
+
+
+
+    public float getArea() {
+        return area=lateraldireita*lateralsuperior;
+    }
+
+
 
     public int getLateralsuperior() {
         return lateralsuperior;
@@ -36,10 +49,7 @@ protected int lateralsuperior,lateralinferior,lateralesquerda,lateraldireita;
     }
     //agora vamos fazer a area do perimetro
 
-    public float perimetroQuadrilatero(int x, int y, int z, int w){
-        int peri=x+y+z+w; // deste modo o perimetro para um quadrilatero
-        return peri;
-    }
-  // como um quadrilatero pode ter lados completamente diferentes nao vamos fazer o calculo da area para ele
+
+
 
 }

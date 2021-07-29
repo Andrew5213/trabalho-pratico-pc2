@@ -21,7 +21,9 @@ public class MenuPrincipal {
     public void sout(String msg) {
         System.out.print(msg);
     }
-
+    public void Guanbiarra( int top){
+        top=in.nextInt();
+    }
     public MenuEnuns Menuprinc(){
 // neste ficara a interface oficial onde vai conter o menu
         sout("Digite uma opção \n" +
