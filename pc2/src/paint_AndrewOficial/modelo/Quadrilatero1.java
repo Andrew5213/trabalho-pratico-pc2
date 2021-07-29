@@ -1,6 +1,6 @@
 package paint_AndrewOficial.modelo;
 
-public class Quadrilatero1 {
+public class Quadrilatero1  extends FigGeometrica{
 protected int lateralsuperior,lateralinferior,lateralesquerda,lateraldireita;
 protected float perimetro , area ;
 

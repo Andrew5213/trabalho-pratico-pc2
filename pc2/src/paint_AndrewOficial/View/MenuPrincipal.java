@@ -29,9 +29,14 @@ public class MenuPrincipal {
         sout("Digite uma opção \n" +
                 "1 - Criar Quadrado\n" +
                 "2 - Criar Retangulo\n" +
+                "3 - Criar Circulo\n"+
+                "4 - Criar Ponto\n"+
+                "5 - Criar Triangulo\n"+
                 "6 - Apagar Item\n" +
-                "9 - Listar\n" +
                 "7 - Desenhar\n" +
+                "8 - Criar losangulo\n"+
+                "9 - Listar\n" +
+                "10 - Criar trapezio\n"+
                 "0 - Sair");
         // agora vamos receber a opcao do usuario
         int opcao= in.nextInt();
@@ -40,12 +45,23 @@ public class MenuPrincipal {
                 return MenuEnuns.QUADRADO;
             case 2:
                 return MenuEnuns.RETANGULO;
+            case 3:
+                return MenuEnuns.CIRCULO;
+            case 4:
+                return MenuEnuns.PONTO;
+            case 5:
+                return MenuEnuns.TRIANGULO;
             case 6:
                 return MenuEnuns.APAGAR;
+            case 7:
+                return  MenuEnuns.DESENHAR;
+            case 8:
+                return MenuEnuns.LOSANGULO;
             case 9:
                 return MenuEnuns.LISTAR;
-            case 7:
-                return MenuEnuns.DESENHAR;
+            case 10:
+                return MenuEnuns.TRAPEZIO;
+
             case 0:
                 return MenuEnuns.SAIR;
 

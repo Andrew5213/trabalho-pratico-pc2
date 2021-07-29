@@ -1,10 +1,9 @@
 package paint_AndrewOficial.controlador;
 
-import paint_AndrewOficial.View.MenuPrincipal;
-import paint_AndrewOficial.View.MenuQuadrado;
-import paint_AndrewOficial.View.MenuRetangulo;
+import paint_AndrewOficial.View.*;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.modelo.Retangulo;
+
 
 public class principal {
     private MenuPrincipal tela;
@@ -15,6 +14,8 @@ public class principal {
         Retangulo r1= new Retangulo(10,20);
         MenuRetangulo r2 = new MenuRetangulo();
         MenuQuadrado q1 = new MenuQuadrado();
+        MenuPonto p1= new MenuPonto();
+        MenuCirculo c1 = new MenuCirculo();
       //  System.out.println(r1.toString());
         //System.out.println(r1.getLateral());
         //System.out.println(r1.getAltura());
@@ -36,6 +37,15 @@ public class principal {
 r2.CriaRetangulo();
 m1.soutln("retangulo criado");
                     break;
+                case CIRCULO:
+                    c1.CriarCirculo();
+                    m1.soutln("Circulo Criado");
+                    break;
+                case PONTO:
+                    p1.CriarPonto();
+                    m1.soutln("ponto criado");
+                    break;
+
                 case LISTAR:
 
                     break;
