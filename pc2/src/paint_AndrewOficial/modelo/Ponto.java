@@ -8,6 +8,7 @@ public class Ponto {
         this.y1 = y1;
     }
 
+
     public int getX1() {
         return x1;
     }
