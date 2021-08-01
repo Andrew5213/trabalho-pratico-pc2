@@ -62,7 +62,7 @@ public class BasicConsole {
             case 7:
                 return OpcoesMenuEnum.DESENHAR;
             case 9:
-                return OpcoesMenuEnum.SAIR;
+                return OpcoesMenuEnum.LISTAR;
             default:
                 return OpcoesMenuEnum.SAIR;
         }

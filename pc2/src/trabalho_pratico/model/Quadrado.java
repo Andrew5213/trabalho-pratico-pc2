@@ -5,6 +5,7 @@ public class Quadrado extends Retangulo{
     private int tamanhoLado;
 
     public Quadrado(){
+
         this(1);
     }
 

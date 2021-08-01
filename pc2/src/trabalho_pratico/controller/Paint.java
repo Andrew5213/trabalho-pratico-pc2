@@ -44,11 +44,17 @@ public class Paint {
             switch (opcao){
                 case QUADRADO:
                     Quadrado quad = tela.askQuadrado();
-                    insertFiguraGeométrica(quad, 0);
+                    for (int i=0;i< vetor.length;i++) {
+                        insertFiguraGeométrica(quad, i);
+                        break;
+                    }
                     break;
                 case RETANGULO:
                     Retangulo retangulo = new Retangulo();
-                    insertFiguraGeométrica(retangulo, 1);
+                    for (int i=0; i<10;i++) {
+                        insertFiguraGeométrica(retangulo, 1);
+                        break;
+                    }
                     break;
                 case LISTAR:
                     //Retangulo retangulo = new Retangulo();

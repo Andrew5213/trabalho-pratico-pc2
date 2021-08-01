@@ -10,6 +10,14 @@ public class Trapezio extends FigGeometrica{
         this.lado2 = lado2;
     }
 
+    @Override
+    public String toString() {
+        return "Trapezio{" +
+                "area=" + getArea() +
+                ", perimetro=" + getPerimetro() +
+                '}';
+    }
+
     public int getBasemaior() {
         return basemaior;
     }

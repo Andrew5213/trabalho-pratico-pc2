@@ -54,8 +54,8 @@ MenuPrincipal m1 = new MenuPrincipal();
     @Override
     public String toString() {
         return "Triangulo{" +
-                "area=" + area +
-                ", perimentro=" + perimentro +
+                "area=" + getArea() +
+                ", perimentro=" + getPerimentro() +
                 '}';
     }
 }

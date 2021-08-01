@@ -20,4 +20,12 @@ public class Losangulo extends Quadrilatero1{
         return area;
     }
 
+    @Override
+    public String toString() {
+        return "Losangulo{" +
+                "lado=" + lado +
+                ", perimetro=" + getPerimetro() +
+                ", area=" + getArea() +
+                '}';
+    }
 }

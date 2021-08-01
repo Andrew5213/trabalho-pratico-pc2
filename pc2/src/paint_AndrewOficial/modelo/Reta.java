@@ -14,4 +14,11 @@ public class Reta extends FigGeometrica{
         // o tamanho sera em relacao somente o eixo x
         return tamanho=x2-x1;
     }
+
+    @Override
+    public String toString() {
+        return "Reta{" +
+                "tamanho=" + getTamanho() +
+                '}';
+    }
 }

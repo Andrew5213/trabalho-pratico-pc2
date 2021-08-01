@@ -15,6 +15,7 @@ public class Quadrado1 extends Quadrilatero1{
 
         this.setLado(lado);
     }
+
     @Override
     public float getPerimetro() {
         return perimetro=lado*4;

@@ -28,5 +28,12 @@ private float raio1= (float) (2*raio*3.14);
         return area= (raio1);
     }
 
-
+    @Override
+    public String toString() {
+        return "Circulo{" +
+                "raio=" + raio1 +
+                ", diametro=" + getDiametro() +
+                ", area=" + getArea() +
+                '}';
+    }
 }

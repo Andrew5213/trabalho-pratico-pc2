@@ -28,8 +28,8 @@ public class Ponto extends FigGeometrica{
     @Override
     public String toString() {
         return "Ponto{" +
-                "cordenada x1=" + x1 +
-                ", cordenada y1=" + y1 +
+                "cordenada x1=" + getX1() +
+                ", cordenada y1=" + getY1() +
                 '}';
     }
 }
