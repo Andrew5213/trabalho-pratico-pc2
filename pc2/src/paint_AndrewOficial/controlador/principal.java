@@ -4,12 +4,25 @@ import paint_AndrewOficial.View.*;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.modelo.FigGeometrica;
 import paint_AndrewOficial.modelo.Quadrado1;
-import paint_AndrewOficial.modelo.Retangulo;
 import trabalho_pratico.model.Ponto;
 
 import java.util.ArrayList;
 
 public class principal {
+    MenuPrincipal m1 = new MenuPrincipal();
+    // tela = new MenuPrincipal();
+    MenuEnuns opcao = MenuEnuns.LISTAR;
+    //Retangulo r1 = new Retangulo(10, 20);
+    MenuRetangulo r2 = new MenuRetangulo();
+    MenuQuadrado q11 = new MenuQuadrado();
+    MenuPonto p1 = new MenuPonto();
+    MenuCirculo c1 = new MenuCirculo();
+    MenuTriangulo t1 = new MenuTriangulo();
+    MenuLosangulo l1 = new MenuLosangulo();
+    MenuReta r = new MenuReta();
+    MenuTrapezio t11= new MenuTrapezio();
+    Paint_Janela p11 = new Paint_Janela();
+    MenuDesenhos d1= new MenuDesenhos();
     private MenuPrincipal tela;
     //agora vamos criar um vetor
     private FigGeometrica[] vetor;
@@ -39,18 +52,7 @@ public class principal {
         //private MenuPrincipal tela;
 
         //public static void main(String[] args) {
-        MenuPrincipal m1 = new MenuPrincipal();
-        // tela = new MenuPrincipal();
-        MenuEnuns opcao = MenuEnuns.LISTAR;
-        Retangulo r1 = new Retangulo(10, 20);
-        MenuRetangulo r2 = new MenuRetangulo();
-        MenuQuadrado q11 = new MenuQuadrado();
-        MenuPonto p1 = new MenuPonto();
-        MenuCirculo c1 = new MenuCirculo();
-        MenuTriangulo t1 = new MenuTriangulo();
-        MenuLosangulo l1 = new MenuLosangulo();
-        MenuReta r = new MenuReta();
-        MenuTrapezio t11= new MenuTrapezio();
+
 
         //  System.out.println(r1.toString());
         //System.out.println(r1.getLateral());
@@ -111,8 +113,35 @@ public class principal {
                     }
                     break;
                 case APAGAR:
+                    for (int i=0;i< vetor.length;i++){
+                        if(vetor[i]!=null) {
+                            vetor[i]=null;
+
+                        }
+                    }
+                    m1.soutln("todas as posicoes do vetor foram apagadas");
                     break;
                 case DESENHAR:
+                    d1.Escolha();
+                    switch (d1.getI()){
+                        case 1:
+                        p11.PintarQuadrado();
+                        break;
+                        case 2:
+                            p11.PintarRetangulo();
+                            break;
+                        case 3:
+                            p11.PintarTriangulo();
+                            break;
+                        case 4:
+                            p11.PintarCirculo();
+                            break;
+                        case 5:
+                            p11.PintarReta();
+                            break;
+                        case 6:
+                            p11.PintarLosangulo();//este nao consegi fazer funcionar graficamente
+                    }
 
                     break;
                 case SAIR:
@@ -145,4 +174,5 @@ public class principal {
 
         tela.soutln("------------FIM TESTE---------------");
     }
+
 }
