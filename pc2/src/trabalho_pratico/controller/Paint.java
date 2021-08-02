@@ -105,3 +105,4 @@ public class Paint {
         tela.showMsg("------------FIM TESTE---------------");
     }
 }
+

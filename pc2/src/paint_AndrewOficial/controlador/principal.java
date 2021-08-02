@@ -17,14 +17,15 @@ public class principal {
         vetor= new FigGeometrica[10];
         tela = new MenuPrincipal();
     }
-    public boolean insertFigGeométrica(FigGeometrica fig, int i) {
-        for (i=0;i< vetor.length;i++){
-            if(vetor[i]==null){
+    public boolean insertFigGeométrica(FigGeometrica fig) {
+        for (int i=0;i< vetor.length;i++){
+            if(vetor[i]==null) {
                 vetor[i] = fig;
-            }else return false;
+                return true;
+            }
 
         }
-        return true;
+        return false;
     }
 
     //Aqui tem um for
@@ -65,72 +66,47 @@ public class principal {
 
             switch (opcao) {
                 case QUADRADO:
-                    //q11.CriarQuadrado();
-//                        //Quadrado1 q1  =tela.Menuprincipal();
-                    for (int i=0;i< vetor.length;i++){
-                   // if(vetor[i]==null) {
-                        insertFigGeométrica(q11.CriarQuadrado(), i);
-                        break;
 
-                  //  }
+                    insertFigGeométrica(q11.CriarQuadrado());
 
-                        //este break e para parar assim q achar uma posicao i vazia
-                    }
+
                     m1.soutln("Quadrado criado");
 
                     break;
                 case RETANGULO:
-                    //r2.CriaRetangulo();
-                    for (int i=0;i<vetor.length;i++){
-                        insertFigGeométrica(r2.CriaRetangulo(), i);
-                        break;
-                    }
+
+                    insertFigGeométrica(r2.CriaRetangulo());
+
+
                     m1.soutln("retangulo criado");
                     break;
                 case CIRCULO:
-                    //c1.CriarCirculo();
-                    for (int i=0;i<vetor.length;i++){
-                        insertFigGeométrica(c1.CriarCirculo(),i);
-                        break;
-                    }
+
+                    insertFigGeométrica(c1.CriarCirculo());
                     m1.soutln("Circulo Criado");
                     break;
                 case PONTO:
-                    //p1.CriarPonto();
-                    for (int i=0;i<vetor.length;i++){
-                        insertFigGeométrica(p1.CriarPonto(),i);
-                        break;
-                    }
+                    insertFigGeométrica(p1.CriarPonto());
                     m1.soutln("ponto criado");
                     break;
                 case TRIANGULO:
-                    //t1.CriarTriangulo();
-                    for (int i=0;i< vetor.length;i++){
-                        insertFigGeométrica(t1.CriarTriangulo(),i);
-                        break;
-                    }
+
+                    insertFigGeométrica(t1.CriarTriangulo());
                     m1.soutln("triangulo criado");
                     break;
                 case LOSANGULO:
-                    //l1.CriarLosangulo();
-                    for (int i=0;i< vetor.length;i++){
-                        insertFigGeométrica(l1.CriarLosangulo(),i);
-                        break;
-                    }
+
+                    insertFigGeométrica(l1.CriarLosangulo());
                     m1.soutln("losangulo criado ");
                     break;
                 case RETA:
-                    //r.CriarReta();
-                    for (int i=0;i< vetor.length;i++){
-                        insertFigGeométrica(r.CriarReta(),i);
-                        break;
-                    }
+                    insertFigGeométrica(r.CriarReta());
                     m1.soutln("reta criada");
                     break;
                 case LISTAR:
                     for (int i=0;i< vetor.length;i++){
                         if(vetor[i]!=null) {
-                            m1.sout(vetor[i].toString());
+                            m1.soutln(vetor[i].toString());
                         }
                     }
                     break;
@@ -140,15 +116,9 @@ public class principal {
 
                     break;
                 case SAIR:
-
-
                     break;
                 case TRAPEZIO:
-                    //t11.CriaTrapezio();
-                    for (int i=0;i<vetor.length;i++){;
-                        insertFigGeométrica(t11.CriaTrapezio(),i);
-                        break;
-                    }
+                    insertFigGeométrica(t11.CriaTrapezio());
                     break;
                 default:
             }
@@ -176,4 +146,3 @@ public class principal {
         tela.soutln("------------FIM TESTE---------------");
     }
 }
-
