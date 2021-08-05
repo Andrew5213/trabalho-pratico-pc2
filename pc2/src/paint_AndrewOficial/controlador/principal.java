@@ -23,6 +23,7 @@ public class principal {
     MenuTrapezio t11= new MenuTrapezio();
     Paint_Janela p11 = new Paint_Janela();
     MenuDesenhos d1= new MenuDesenhos();
+    MenuTexto tx = new MenuTexto();
     private MenuPrincipal tela;
     //agora vamos criar um vetor
     private FigGeometrica[] vetor;
@@ -41,24 +42,11 @@ public class principal {
         return false;
     }
 
-    //Aqui tem um for
-    // procura posição vazia
-    // Se está cheio retorna False
 
 
     public void Exe() {
 
 
-        //private MenuPrincipal tela;
-
-        //public static void main(String[] args) {
-
-
-        //  System.out.println(r1.toString());
-        //System.out.println(r1.getLateral());
-        //System.out.println(r1.getAltura());
-
-        //MenuEnuns opcao = MenuEnuns.LISTAR;
 
         do {
             opcao = m1.Menuprinc();
@@ -100,6 +88,10 @@ public class principal {
 
                     insertFigGeométrica(l1.CriarLosangulo());
                     m1.soutln("losangulo criado ");
+                    break;
+                case TEXTO:
+                    insertFigGeométrica(tx.CriarTexto());
+                            m1.soutln("texto criado");
                     break;
                 case RETA:
                     insertFigGeométrica(r.CriarReta());

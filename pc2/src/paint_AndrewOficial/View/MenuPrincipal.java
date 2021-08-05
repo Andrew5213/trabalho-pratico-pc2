@@ -27,6 +27,7 @@ public class MenuPrincipal {
     public MenuEnuns Menuprinc(){
 // neste ficara a interface oficial onde vai conter o menu
         sout("Digite uma opção \n" +
+                "11- texto\n"+
                 "1 - Criar Quadrado\n" +
                 "2 - Criar Retangulo\n" +
                 "3 - Criar Circulo\n"+
@@ -61,6 +62,8 @@ public class MenuPrincipal {
                 return MenuEnuns.LISTAR;
             case 10:
                 return MenuEnuns.TRAPEZIO;
+            case 11:
+                return MenuEnuns.TEXTO;
 
             case 0:
                 return MenuEnuns.SAIR;
