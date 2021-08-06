@@ -27,7 +27,7 @@ public class MenuPrincipal {
     public MenuEnuns Menuprinc(){
 // neste ficara a interface oficial onde vai conter o menu
         sout("Digite uma opção \n" +
-                "11- texto\n"+
+
                 "1 - Criar Quadrado\n" +
                 "2 - Criar Retangulo\n" +
                 "3 - Criar Circulo\n"+
@@ -38,6 +38,9 @@ public class MenuPrincipal {
                 "8 - Criar losangulo\n"+
                 "9 - Listar\n" +
                 "10 - Criar trapezio\n"+
+                "11- texto\n"+
+                "12- carregar\n"+
+                "13- recarregar\n"+
                 "0 - Sair");
         // agora vamos receber a opcao do usuario
         int opcao= in.nextInt();
