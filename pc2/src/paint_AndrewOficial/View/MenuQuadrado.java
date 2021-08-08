@@ -19,7 +19,8 @@ public class MenuQuadrado extends MenuPrincipal{
                 "2-EDITAR\n"+
                 "3-listar\n"+// no caso listar os quadrados
                 "4-mostrar\n"+//um unico item
-                "-excluir\n");
+                "5-excluir\n" +
+                "0-sair");
         opcao1=in.nextInt();
         setOpcao(opcao1);
         return getOpcao();

@@ -58,36 +58,150 @@ public class principal {
                             break;
                         case 5:
                             break;
+                        case 0:
+                            break;
                     }
                    //
                     break;
                 case RETANGULO:
-                    insertFigGeométrica(r2.CriaRetangulo());
-                    m1.soutln("retangulo criado");
+                  //  insertFigGeométrica(r2.CriaRetangulo());
+                    r2.MenuRet();
+                   // m1.soutln("retangulo criado");
+                    switch (r2.getOpcao()){
+                        case 1://novo
+                            insertFigGeométrica(r2.CriaRetangulo());
+                            m1.soutln("retangulo  criado");
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 0:
+                            break;
+                    }
+
                     break;
                 case CIRCULO:
-                    insertFigGeométrica(c1.CriarCirculo());
-                    m1.soutln("Circulo Criado");
+                    c1.MenuCirc();
+                    switch (c1.getOpcao()){
+                        case 1://novo
+                            insertFigGeométrica(c1.CriarCirculo());
+                            m1.soutln("circulo  criado");
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 0:
+                            break;
+                    }
                     break;
                 case PONTO:
-                    insertFigGeométrica(p1.CriarPonto());
-                    m1.soutln("ponto criado");
+                   p1.MenuPonto();
+
+                    switch (p1.getOpcao()){
+                        case 1://novo
+                            insertFigGeométrica(p1.CriarPonto());
+                            m1.soutln("ponto  criado");
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 0:
+                            break;
+                    }
+
                     break;
                 case TRIANGULO:
-                    insertFigGeométrica(t1.CriarTriangulo());
-                    m1.soutln("triangulo criado");
+                   t1.MenuTrian();
+                    switch (t1.getOpcao()){
+                        case 1://novo
+                            insertFigGeométrica(t1.CriarTriangulo());
+                            m1.soutln("triangulo   criado");
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 0:
+                            break;
+                    }
                     break;
                 case LOSANGULO:
-                    insertFigGeométrica(l1.CriarLosangulo());
-                    m1.soutln("losangulo criado ");
+                   l1.MenuLosan();
+                    switch (l1.getOpcao()){
+                        case 1://novo
+                            insertFigGeométrica(l1.CriarLosangulo());
+                            m1.soutln("losangulo   criado");
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 0:
+                            break;
+                    }
                     break;
                 case TEXTO:
-                    insertFigGeométrica(tx.CriarTexto());
-                            m1.soutln("texto criado");
+                   tx.MenuText();
+                    switch (tx.getOpcao()){
+                        case 1://novo
+                            insertFigGeométrica(tx.CriarTexto());
+                            m1.soutln("losangulo   criado");
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 0:
+                            break;
+                    }
+
+
                     break;
                 case RETA:
-                    insertFigGeométrica(r.CriarReta());
-                    m1.soutln("reta criada");
+                   r.MenuReta();
+                    switch (r.getOpcao()){
+                        case 1://novo
+                            insertFigGeométrica(r.CriarReta());
+                            m1.soutln("reta    criada");
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 0:
+                            break;
+                    }
                     break;
                 case LISTAR:
                     for (int i=0;i< vetor.length;i++){
