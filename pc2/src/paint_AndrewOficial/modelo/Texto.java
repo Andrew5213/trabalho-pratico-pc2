@@ -1,6 +1,6 @@
 package paint_AndrewOficial.modelo;
 
-public class Texto extends FigGeometrica{
+public class Texto {
     protected String texto;
 
     public Texto(String texto) {
@@ -19,7 +19,7 @@ public class Texto extends FigGeometrica{
     @Override
     public String toString() {
         return "Texto{" +
-                "texto='" + getTexto() + '\'' +
+                "texto='" + texto + '\'' +
                 '}';
     }
 }

@@ -1,9 +1,12 @@
 package paint_AndrewOficial.controlador;
+
 import paint_AndrewOficial.View.*;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.modelo.FigGeometrica;
 import paint_AndrewOficial.modelo.Quadrado1;
+import paint_AndrewOficial.modelo.Texto;
 import trabalho_pratico.model.Ponto;
+
 import java.util.ArrayList;
 public class principal {
     MenuPrincipal m1 = new MenuPrincipal();
@@ -21,6 +24,7 @@ public class principal {
     MenuTexto tx = new MenuTexto();
     private MenuPrincipal tela;
     private FigGeometrica[] vetor;
+    private Texto[] vet;
     public principal(){
         vetor= new FigGeometrica[10];
         tela = new MenuPrincipal();
@@ -36,6 +40,8 @@ public class principal {
     }
     public void Exe() {
         do {
+            String vet[]= new String[tx.getQuad()];
+
             opcao = m1.Menuprinc();
             m1.sout("escolhi: " + opcao + "\n\n");
             switch (opcao) {
@@ -163,12 +169,16 @@ public class principal {
                             break;
                     }
                     break;
+
                 case TEXTO:
                    tx.MenuText();
                     switch (tx.getOpcao()){
                         case 1://novo
-                            insertFigGeométrica(tx.CriarTexto());
-                            m1.soutln("losangulo   criado");
+                         tx.QuantidadeTexto();
+                         for   (int i=0;i< vet.length;i++){
+                             tx.LerTexto();
+                             vet[i]=tx.getPalavra();
+                         }
                             break;
                         case 2:
                             break;
@@ -207,6 +217,11 @@ public class principal {
                     for (int i=0;i< vetor.length;i++){
                         if(vetor[i]!=null) {
                             m1.soutln(vetor[i].toString());
+                        }
+                    }
+                    for (int i=0;i< vet.length;i++) {
+                        if (vet[i]!=null){
+                        m1.soutln(vet[i]);
                         }
                     }
                     break;
