@@ -39,8 +39,8 @@ public class MenuPrincipal {
                 "9 - Listar\n" +
                 "10 - Criar trapezio\n"+
                 "11- texto\n"+
-                "12- carregar\n"+
-                "13- recarregar\n"+
+                "12- SALVAR\n"+
+                "13- RECUPERAR\n"+
                 "0 - Sair");
         // agora vamos receber a opcao do usuario
         int opcao= in.nextInt();
@@ -67,7 +67,10 @@ public class MenuPrincipal {
                 return MenuEnuns.TRAPEZIO;
             case 11:
                 return MenuEnuns.TEXTO;
-
+            case 12:
+                return  MenuEnuns.SALVAR;
+            case 13:
+                return  MenuEnuns.RECUPERAR;
             case 0:
                 return MenuEnuns.SAIR;
 

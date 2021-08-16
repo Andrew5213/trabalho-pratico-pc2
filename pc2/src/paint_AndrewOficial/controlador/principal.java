@@ -2,6 +2,7 @@ package paint_AndrewOficial.controlador;
 
 import paint_AndrewOficial.View.*;
 import paint_AndrewOficial.View.enums.MenuEnuns;
+import paint_AndrewOficial.dao.FigGeometricaDao;
 import paint_AndrewOficial.modelo.FigGeometrica;
 import paint_AndrewOficial.modelo.Quadrado1;
 import paint_AndrewOficial.modelo.Texto;
@@ -9,6 +10,7 @@ import trabalho_pratico.model.Ponto;
 
 import java.util.ArrayList;
 public class principal {
+    private FigGeometricaDao dao;
     MenuPrincipal m1 = new MenuPrincipal();
     MenuEnuns opcao = MenuEnuns.LISTAR;
     MenuRetangulo r2 = new MenuRetangulo();
@@ -26,6 +28,7 @@ public class principal {
     private FigGeometrica[] vetor;
     private Texto[] vet;
     public principal(){
+        dao = new FigGeometricaDao(10);
         vetor= new FigGeometrica[10];
         tela = new MenuPrincipal();
     }
@@ -53,10 +56,7 @@ public class principal {
 
             m1.sout("escolhi: " + opcao + "\n\n");
             switch (opcao) {
-                case CARREGAR:
-                    break;
-                case RECARREGAR:
-                    break;
+
                 case QUADRADO:
                     q11.MenuQuad();
                     switch (q11.getOpcao()){
@@ -203,6 +203,14 @@ public class principal {
 
 
                     break;
+                case SALVAR:
+                    dao.salvarEmArquivo();
+                    break;
+                case RECUPERAR:
+                    Boolean resposta = dao.carregarDeArquivo();
+                    //Algo deu errado se resposta for false
+                    break;
+
                 case RETA:
                    r.MenuReta();
                     switch (r.getOpcao()){
