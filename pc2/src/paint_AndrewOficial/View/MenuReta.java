@@ -14,8 +14,9 @@ public class MenuReta extends MenuPrincipal{
     }
 
     public Reta CriarReta(){
-        System.out.println("digite a cordenada inicial em inteiro do eixo x ");
         int x1,x2,y1,y2;
+        System.out.println("digite a cordenada inicial em inteiro do eixo x ");
+
         x1=in.nextInt();
         System.out.println("digite a cordenada final em inteiro do eixo x  ");
         x2= in.nextInt();
@@ -25,7 +26,10 @@ public class MenuReta extends MenuPrincipal{
         y2= in.nextInt();
         Reta r1 = new Reta(x1,y1,x2,y2);
         return r1;
-    }
+
+
+        }
+
     public int MenuReta(){
         int opcao1;
         System.out.println("1-NOVO\n"+// no caso um quadrado

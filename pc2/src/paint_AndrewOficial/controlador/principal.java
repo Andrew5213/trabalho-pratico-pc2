@@ -34,15 +34,23 @@ public class principal {
             if(vetor[i]==null) {
                 vetor[i] = fig;
                 return true;
+            }else{
+                m1.soutln("vetor esta cheio ");// excessao
+
             }
+
         }
         return false;
+
     }
     public void Exe() {
         do {
             String vet[]= new String[tx.getQuad()];
 
-            opcao = m1.Menuprinc();
+                opcao = m1.Menuprinc();
+
+
+
             m1.sout("escolhi: " + opcao + "\n\n");
             switch (opcao) {
                 case CARREGAR:
@@ -53,6 +61,7 @@ public class principal {
                     q11.MenuQuad();
                     switch (q11.getOpcao()){
                         case 1://novo
+
                             insertFigGeométrica(q11.CriarQuadrado());
                             m1.soutln("Quadrado criado");
                             break;
@@ -276,4 +285,5 @@ public class principal {
         tela.soutln("");
         tela.soutln("------------FIM TESTE---------------");
     }
+
 }

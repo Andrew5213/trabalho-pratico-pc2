@@ -8,6 +8,7 @@ public class Reta extends FigGeometrica{
         this.y1 = y11;
         this.x2 = x2;
         this.y2 = y2;
+
     }
 
     public int getTamanho() {
