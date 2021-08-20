@@ -48,7 +48,6 @@ public class principal {
     }
     public void Exe() {
         do {
-            String vet[]= new String[tx.getQuad()];
 
                 opcao = m1.Menuprinc();
 
@@ -180,26 +179,15 @@ public class principal {
                     break;
 
                 case TEXTO:
-                   tx.MenuText();
-                    switch (tx.getOpcao()){
-                        case 1://novo
-                         tx.QuantidadeTexto();
-                         for   (int i=0;i< vet.length;i++){
-                             tx.LerTexto();
-                             vet[i]=tx.getPalavra();
-                         }
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            break;
-                        case 0:
-                            break;
-                    }
+                 tx.SubMenu();
+                 switch (tx.getOpcao1()){
+                     case 1 :
+                         tx.CriarTexto();
+                         m1.soutln("texto criado");
+                         break;
+                     case 2:
+
+                 }
 
 
                     break;
@@ -236,11 +224,7 @@ public class principal {
                             m1.soutln(vetor[i].toString());
                         }
                     }
-                    for (int i=0;i< vet.length;i++) {
-                        if (vet[i]!=null){
-                        m1.soutln(vet[i]);
-                        }
-                    }
+
                     break;
                 case APAGAR:
                     for (int i=0;i< vetor.length;i++){

@@ -28,20 +28,20 @@ public class MenuPrincipal {
 // neste ficara a interface oficial onde vai conter o menu
         sout("Digite uma opção \n" +
 
-                "1 - Criar Quadrado\n" +
-                "2 - Criar Retangulo\n" +
-                "3 - Criar Circulo\n"+
-                "4 - Criar Ponto\n"+
-                "5 - Criar Triangulo\n"+
+                "1 -  Quadrado\n" +
+                "2 -  Retangulo\n" +
+                "3 -  Circulo\n"+
+                "4 -  Ponto\n"+
+                "5 -  Triangulo\n"+
+                "10 - trapezio\n"+
+                "8 -  losangulo\n"+
+                "11- texto\n"+
                 "6 - Apagar Item\n" +
                 "7 - Desenhar\n" +
-                "8 - Criar losangulo\n"+
                 "9 - Listar\n" +
-                "10 - Criar trapezio\n"+
-                "11- texto\n"+
                 "12- SALVAR\n"+
                 "13- RECUPERAR\n"+
-                "0 - Sair");
+                "0 - SAIR");
         // agora vamos receber a opcao do usuario
         int opcao= in.nextInt();
         switch (opcao){

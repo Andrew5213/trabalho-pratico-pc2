@@ -1,59 +1,59 @@
 package paint_AndrewOficial.View;
 
+import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.modelo.Texto;
 
-public class MenuTexto extends MenuPrincipal {
-    protected int opcao,quad;
-    protected String palavra;
+public class MenuTexto extends MenuPrincipal  {
+   protected int quantidade;
 
-    public String getPalavra() {
-        return palavra;
-    }
-
-    public void setPalavra(String palavra) {
-        this.palavra = palavra;
+    public int getOpcao1() {
+        return opcao1;
     }
 
-    public int getQuad() {
-        return quad;
+    public void setOpcao1(int opcao1) {
+        this.opcao1 = opcao1;
     }
 
-    public void setQuad(int quad) {
-        this.quad = quad;
-    }
+    protected int opcao1;;
+   protected String palavra;
 
-    public int getOpcao() {
-        return opcao;
-    }
+   public Texto CriarTexto(){
+       System.out.println("digite uma palavra  ");
+       String palavra= in.nextLine();
+       Texto tx = new Texto(palavra);
+       return tx;
 
-    public void setOpcao(int opcao) {
-        this.opcao = opcao;
-    }
+   }
+   public MenuEnuns SubMenu(){
 
-    public Texto CriarTexto(){
-        System.out.println("digite o texto sendo ele uma string ");
-        String texto=in.nextLine();
-        Texto tx = new Texto(texto);
-        return tx;
-    }
-    public String LerTexto(){
-        this.palavra=in.nextLine();
-        return this.getPalavra();
-    }
-    public void  QuantidadeTexto(){
-    System.out.println("digite a quantidade de palavras no texto ");
-    int quad=in.nextInt();
-        this.setQuad(quad);
-    }
-    public int MenuText(){
-        int opcao1;
-        System.out.println("1-NOVO\n"+// no caso um quadrado
-                "2-EDITAR\n"+
-                "3-listar\n"+// no caso listar os quadrados
-                "4-mostrar\n"+//um unico item
-                "-excluir\n");
-        opcao1=in.nextInt();
-        setOpcao(opcao1);
-        return getOpcao();
-    }
-}
+
+           System.out.println("1-NOVO\n"+// no caso um quadrado
+                   "2-EDITAR\n"+
+                   "3-listar\n"+// no caso listar os quadrados
+                   "4-apagar \n"+//um unico item
+                   "-excluir\n");
+          setOpcao1(in.nextInt());
+
+
+          switch (getOpcao1()){
+              case 1:
+                  return MenuEnuns.CRIAR;
+              case 2:
+                  return MenuEnuns.EDITAR;
+              case 3:
+                  return MenuEnuns.LISTAR;
+              case 4:
+                  return MenuEnuns.APAGAR;
+              case 0:
+                  return MenuEnuns.SAIR;
+                  default:
+                      return MenuEnuns.SAIR;
+
+          }
+
+
+
+           }
+       }
+
+

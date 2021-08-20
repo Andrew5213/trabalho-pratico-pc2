@@ -1,25 +1,17 @@
 package paint_AndrewOficial.modelo;
 
-public class Texto {
-    protected String texto;
+public class Texto  {
+private String palavra;
 
-    public Texto(String texto) {
-        this.setTexto(texto);
-
+    public String getPalavra() {
+        return palavra;
     }
 
-    public String getTexto() {
-        return texto;
+    public void setPalavra(String palavra) {
+        this.palavra = palavra;
     }
 
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
-
-    @Override
-    public String toString() {
-        return "Texto{" +
-                "texto='" + texto + '\'' +
-                '}';
+    public Texto(String palavra) {
+        this.palavra = palavra;
     }
 }
