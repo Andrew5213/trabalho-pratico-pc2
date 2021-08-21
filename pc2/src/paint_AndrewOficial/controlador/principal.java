@@ -24,11 +24,12 @@ public class principal {
     Paint_Janela p11 = new Paint_Janela();
     MenuDesenhos d1= new MenuDesenhos();
     MenuTexto tx = new MenuTexto();
+    FigGeometricaDao d =new FigGeometricaDao(10);
     private MenuPrincipal tela;
     private FigGeometrica[] vetor;
     private Texto[] vet;
     public principal(){
-        dao = new FigGeometricaDao(10);
+
         vetor= new FigGeometrica[10];
         tela = new MenuPrincipal();
     }
@@ -62,6 +63,7 @@ public class principal {
                         case 1://novo
 
                             insertFigGeométrica(q11.CriarQuadrado());
+                    //        d.create(q11.CriarQuadrado());
                             m1.soutln("Quadrado criado");
                             break;
                         case 2:
@@ -84,6 +86,7 @@ public class principal {
                     switch (r2.getOpcao()){
                         case 1://novo
                             insertFigGeométrica(r2.CriaRetangulo());
+                            //d.create(r2.CriaRetangulo());
                             m1.soutln("retangulo  criado");
                             break;
                         case 2:
@@ -104,6 +107,7 @@ public class principal {
                     switch (c1.getOpcao()){
                         case 1://novo
                             insertFigGeométrica(c1.CriarCirculo());
+                            //d.create(c1.CriarCirculo());
                             m1.soutln("circulo  criado");
                             break;
                         case 2:
@@ -124,9 +128,11 @@ public class principal {
                     switch (p1.getOpcao()){
                         case 1://novo
                             insertFigGeométrica(p1.CriarPonto());
+                            //d.create(p1.CriarPonto());
                             m1.soutln("ponto  criado");
                             break;
                         case 2:
+
                             break;
                         case 3:
                             break;
@@ -144,9 +150,11 @@ public class principal {
                     switch (t1.getOpcao()){
                         case 1://novo
                             insertFigGeométrica(t1.CriarTriangulo());
+                            //d.create(t1.CriarTriangulo());
                             m1.soutln("triangulo   criado");
                             break;
                         case 2:
+
                             break;
                         case 3:
                             break;
@@ -163,6 +171,7 @@ public class principal {
                     switch (l1.getOpcao()){
                         case 1://novo
                             insertFigGeométrica(l1.CriarLosangulo());
+                           // d.create(l1.CriarLosangulo());
                             m1.soutln("losangulo   criado");
                             break;
                         case 2:
@@ -180,9 +189,11 @@ public class principal {
 
                 case TEXTO:
                  tx.SubMenu();
+                // in.nextline();
                  switch (tx.getOpcao1()){
                      case 1 :
-                         tx.CriarTexto();
+                         insertFigGeométrica(tx.CriarTexto());
+                         //d.create(tx.CriarTexto());
                          m1.soutln("texto criado");
                          break;
                      case 2:
@@ -192,10 +203,11 @@ public class principal {
 
                     break;
                 case SALVAR:
-                    dao.salvarEmArquivo();
+                    d.salvarEmArquivo();
                     break;
                 case RECUPERAR:
-                    Boolean resposta = dao.carregarDeArquivo();
+                    //Boolean resposta = dao.carregarDeArquivo();
+                    d.carregarDeArquivo();
                     //Algo deu errado se resposta for false
                     break;
 
@@ -204,6 +216,7 @@ public class principal {
                     switch (r.getOpcao()){
                         case 1://novo
                             insertFigGeométrica(r.CriarReta());
+                            //d.create(r.CriarReta());
                             m1.soutln("reta    criada");
                             break;
                         case 2:
@@ -224,16 +237,11 @@ public class principal {
                             m1.soutln(vetor[i].toString());
                         }
                     }
+                    d.getItens();
+
 
                     break;
-                case APAGAR:
-                    for (int i=0;i< vetor.length;i++){
-                        if(vetor[i]!=null) {
-                            vetor[i]=null;
-                        }
-                    }
-                    m1.soutln("todas as posicoes do vetor foram apagadas");
-                    break;
+
                 case DESENHAR:
                     d1.Escolha();
                     switch (d1.getI()){

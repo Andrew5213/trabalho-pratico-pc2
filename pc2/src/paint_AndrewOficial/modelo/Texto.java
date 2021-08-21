@@ -1,6 +1,6 @@
 package paint_AndrewOficial.modelo;
 
-public class Texto  {
+public class Texto extends FigGeometrica {//isto e so para aparecer no vetor
 private String palavra;
 
     public String getPalavra() {
@@ -13,5 +13,12 @@ private String palavra;
 
     public Texto(String palavra) {
         this.palavra = palavra;
+    }
+
+    @Override
+    public String toString() {
+        return "Texto{" +
+                "palavra='" + getPalavra() + '\'' +
+                '}';
     }
 }

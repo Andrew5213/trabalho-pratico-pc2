@@ -6,18 +6,26 @@ import java.io.*;
 
 
 public class FigGeometricaDao {
-    private FigGeometrica[] vetor;
+    public FigGeometrica[] ds;
 
     public FigGeometrica[] getItens() {
-        return vetor.clone();
+        return ds.clone();
     }
     public FigGeometricaDao(int tamanho){
-        vetor= new FigGeometrica[tamanho];
+        ds= new FigGeometrica[tamanho];
+    }
+    public void Listar(){
+        for (int i=0;i< ds.length;i++){
+            if(ds[i]!=null) {
+               // m1.soutln(vetor[i].toString());
+                System.out.println(ds[i].toString());
+            }
+        }
     }
     public boolean create(FigGeometrica figura){
         //acha posiçào e salvao no vetor
-        for (int i=0; i< vetor.length;i++){
-            if (vetor[i]==figura){
+        for (int i=0; i< ds.length;i++){
+            if (ds[i]==figura){
                 int posicao=i;
             }
 
@@ -30,9 +38,9 @@ public class FigGeometricaDao {
         return null;
     }
     public Boolean update(FigGeometrica figAnterior, FigGeometrica figNova){
-        for (int i = 0; i < vetor.length; i++) {
-            if(vetor[i].equals(figAnterior)){
-                vetor[i] = figNova;
+        for (int i = 0; i < ds.length; i++) {
+            if(ds[i].equals(figAnterior)){
+                ds[i] = figNova;
                 return true;
             }
         }
@@ -40,9 +48,9 @@ public class FigGeometricaDao {
     }
 
     public Boolean delete(FigGeometrica figuraGeometrica){
-        for (int i = 0; i < vetor.length; i++) {
-            if(vetor[i].equals(figuraGeometrica)){
-                vetor[i] = null;
+        for (int i = 0; i < ds.length; i++) {
+            if(ds[i].equals(figuraGeometrica)){
+                ds[i] = null;
                 return true;
             }
         }
@@ -53,7 +61,7 @@ public class FigGeometricaDao {
         try {
             arquivo = new FileOutputStream("figurasGeometricas.dat");
             ObjectOutputStream out = new ObjectOutputStream(arquivo);
-            out.writeObject(vetor);
+            out.writeObject(ds);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }catch (IOException e) {
@@ -66,7 +74,7 @@ public class FigGeometricaDao {
         try {
             FileInputStream arq = new FileInputStream("figurasGeometricas.dat");
             ObjectInputStream in = new ObjectInputStream(arq);
-            vetor = (FigGeometrica[]) in.readObject();
+            ds = (FigGeometrica[]) in.readObject();
         }
         catch(IOException ex){
             System.out.println("Ferrou IOExpection");
