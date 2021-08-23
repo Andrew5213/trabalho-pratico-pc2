@@ -1,6 +1,8 @@
 package paint_AndrewOficial.View;
 
-public class MenuDesenhos extends MenuPrincipal{
+import paint_AndrewOficial.View.MenuPrincipal;
+
+public class MenuDesenhos extends MenuPrincipal {
  protected  int i;
 
     public int getI() {

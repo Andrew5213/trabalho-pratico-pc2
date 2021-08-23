@@ -1,8 +1,9 @@
 package paint_AndrewOficial.View;
 
+import paint_AndrewOficial.View.MenuPrincipal;
 import paint_AndrewOficial.modelo.Circulo;
 
-public class MenuCirculo extends MenuPrincipal{
+public class MenuCirculo extends MenuPrincipal {
     protected int opcao;
 
     public int getOpcao() {

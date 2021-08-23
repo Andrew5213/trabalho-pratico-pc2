@@ -35,6 +35,7 @@ public class FigGeometricaDao {
     }
     public FigGeometrica read(int codig){
         //retortan a figura da posição i
+
         return null;
     }
     public Boolean update(FigGeometrica figAnterior, FigGeometrica figNova){

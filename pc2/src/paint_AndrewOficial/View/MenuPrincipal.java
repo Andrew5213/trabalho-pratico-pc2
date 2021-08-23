@@ -11,6 +11,7 @@ public class MenuPrincipal {
     protected Scanner in;
 
     public MenuPrincipal() {
+
         in = new Scanner(System.in);
     }
 

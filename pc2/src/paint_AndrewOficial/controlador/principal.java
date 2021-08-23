@@ -1,5 +1,5 @@
 package paint_AndrewOficial.controlador;
-
+import paint_AndrewOficial.View.gui.*;
 import paint_AndrewOficial.View.*;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.dao.FigGeometricaDao;
@@ -10,6 +10,8 @@ import trabalho_pratico.model.Ponto;
 
 import java.util.ArrayList;
 public class principal {
+    //private FiguraGeometricaDAO dao;
+    private IMenuPaintView tela;
     private FigGeometricaDao dao;
     MenuPrincipal m1 = new MenuPrincipal();
     MenuEnuns opcao = MenuEnuns.LISTAR;
@@ -25,13 +27,14 @@ public class principal {
     MenuDesenhos d1= new MenuDesenhos();
     MenuTexto tx = new MenuTexto();
     FigGeometricaDao d =new FigGeometricaDao(10);
-    private MenuPrincipal tela;
     private FigGeometrica[] vetor;
     private Texto[] vet;
+
+    QuadradoController quadController = new QuadradoController(dao);
     public principal(){
 
         vetor= new FigGeometrica[10];
-        tela = new MenuPrincipal();
+
     }
     public boolean insertFigGeométrica(FigGeometrica fig) {
         for (int i=0;i< vetor.length;i++){
@@ -53,31 +56,11 @@ public class principal {
                 opcao = m1.Menuprinc();
 
 
-
             m1.sout("escolhi: " + opcao + "\n\n");
             switch (opcao) {
 
                 case QUADRADO:
-                    q11.MenuQuad();
-                    switch (q11.getOpcao()){
-                        case 1://novo
-
-                            insertFigGeométrica(q11.CriarQuadrado());
-                    //        d.create(q11.CriarQuadrado());
-                            m1.soutln("Quadrado criado");
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            break;
-                        case 0:
-                            break;
-                    }
-                   //
+                    quadController.start();
                     break;
                 case RETANGULO:
                   //  insertFigGeométrica(r2.CriaRetangulo());
@@ -203,12 +186,10 @@ public class principal {
 
                     break;
                 case SALVAR:
-                    d.salvarEmArquivo();
+                    dao.salvarEmArquivo();
                     break;
                 case RECUPERAR:
-                    //Boolean resposta = dao.carregarDeArquivo();
-                    d.carregarDeArquivo();
-                    //Algo deu errado se resposta for false
+                    Boolean resposta = dao.carregarDeArquivo();
                     break;
 
                 case RETA:
@@ -279,11 +260,11 @@ public class principal {
         lista.add("dsdsdsd");
         lista.add(new Ponto());
         lista.add(new ArrayList());
-        tela.soutln("------------TESTE parametrico---------------");
+        m1.soutln("------------TESTE parametrico---------------");
         ArrayList<FigGeometrica> listaFig = new ArrayList();
         listaFig.add(new Quadrado1(1));
-        tela.soutln("");
-        tela.soutln("------------FIM TESTE---------------");
+        m1.soutln("");
+        m1.soutln("------------FIM TESTE---------------");
     }
 
 }
