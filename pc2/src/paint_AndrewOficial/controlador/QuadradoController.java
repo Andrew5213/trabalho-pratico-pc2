@@ -4,10 +4,7 @@ import paint_AndrewOficial.View.MenuPrincipal;
 import paint_AndrewOficial.View.QuadradoCli;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.dao.FigGeometricaDao;
-import paint_AndrewOficial.modelo.FigGeometrica;
 import paint_AndrewOficial.modelo.Quadrado1;
-
-import java.util.ArrayList;
 
 public class QuadradoController  implements Iquadrado{
     MenuPrincipal p = new MenuPrincipal();
@@ -32,6 +29,7 @@ public class QuadradoController  implements Iquadrado{
                 case CRIAR:
                     Quadrado1 newQuad = tela.create();
 
+
                     break;
                 case EDITAR:
                     p.soutln("digite o novo valor do quadrado ");
@@ -39,17 +37,22 @@ public class QuadradoController  implements Iquadrado{
                     Quadrado1 newquad=tela.update(recebe);
                     break;
                 case LISTAR:
-                    ArrayList<Quadrado1> lista = new ArrayList<Quadrado1>();
-                    for (FigGeometrica fig: dao.getItens()){
-                        if( fig instanceof Quadrado1){
-                            lista.add((Quadrado1) fig);
+                    for (int i=0;i< dao.ds.length;i++){
+                        if(dao.ds[i]!=null) {
+                            p.soutln(dao.ds[i].toString());
                         }
                     }
-                    tela.list((Quadrado1[]) lista.toArray());
+                    //*ArrayList<Quadrado1> lista = new ArrayList<Quadrado1>();
+                    //for (FigGeometrica fig: dao.getItens()){
+                      //  if( fig instanceof Quadrado1){
+                         //   lista.add((Quadrado1) fig);
+                       // }
+                        //}
+                   // tela.list((Quadrado1[]) lista.toArray());
                     break;
                 case APAGAR:
                     p.soutln("digite qual e a figura q sera apagada ");
-                    dao.delete();
+
                     break;
                 case SALVAR:
                     dao.salvarEmArquivo();

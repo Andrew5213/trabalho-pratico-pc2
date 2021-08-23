@@ -1,11 +1,11 @@
 package paint_AndrewOficial.dao;
 
+import paint_AndrewOficial.View.MenuPrincipal;
 import paint_AndrewOficial.modelo.FigGeometrica;
 
 import java.io.*;
-
-
 public class FigGeometricaDao {
+    MenuPrincipal m1 = new MenuPrincipal();
     public FigGeometrica[] ds;
 
     public FigGeometrica[] getItens() {
@@ -22,16 +22,18 @@ public class FigGeometricaDao {
             }
         }
     }
-    public boolean create(FigGeometrica figura){
+    public boolean create(FigGeometrica fig){
         //acha posiçào e salvao no vetor
-        for (int i=0; i< ds.length;i++){
-            if (ds[i]==figura){
-                int posicao=i;
+        for (int i=0;i< ds.length;i++) {
+            if (ds[i] == null) {
+                ds[i] = fig;
+                return true;
+            } else {
+                m1.soutln("vetor esta cheio ");// excessao
+
             }
-
         }
-
-        return true;
+        return false;
     }
     public FigGeometrica read(int codig){
         //retortan a figura da posição i
