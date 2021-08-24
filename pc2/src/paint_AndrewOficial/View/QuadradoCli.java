@@ -47,6 +47,7 @@ public class QuadradoCli extends MenuPrincipal  {
     }
 
    // @Override
+
     public void read(Quadrado1 quadrado) {
 
         System.out.println(quadrado);
