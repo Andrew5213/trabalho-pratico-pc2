@@ -1,42 +1,42 @@
 package paint_AndrewOficial.controlador;
 
-import paint_AndrewOficial.controlador.ControladorFig.Iquadrado;
 import paint_AndrewOficial.View.MenuPrincipal;
 import paint_AndrewOficial.View.MenuQuadrado;
-import paint_AndrewOficial.View.QuadradoCli;
+import paint_AndrewOficial.View.MenuRetangulo;
+import paint_AndrewOficial.View.MenuTexto;
 import paint_AndrewOficial.View.enums.MenuEnuns;
+import paint_AndrewOficial.controlador.ControladorFig.ITexto;
 import paint_AndrewOficial.dao.FigGeometricaDao;
-import paint_AndrewOficial.modelo.Quadrado1;
+import paint_AndrewOficial.modelo.Retangulo;
+import paint_AndrewOficial.modelo.Texto;
 
-public class QuadradoController implements Iquadrado {
+public class TextoController implements ITexto {
+
     MenuPrincipal p = new MenuPrincipal();
-    QuadradoCli tela = new QuadradoCli();
+    MenuTexto tela = new MenuTexto();
     private FigGeometricaDao dao;
-
-    public QuadradoController(FigGeometricaDao dao) {
-        QuadradoCli tela = new QuadradoCli();
+    public TextoController(FigGeometricaDao dao) {
+        MenuRetangulo tela = new MenuRetangulo();
         this.dao = dao;
     }
-
-    @Override
     public MenuEnuns start() {
 
         MenuEnuns opcao;
         do {
-            opcao = tela.menuPrincipal();
+            opcao = tela.SubMenu();
 
             p.soutln("escolhi: " + opcao + "\n\n");
 
             switch (opcao) {
                 case CRIAR:
-                    Quadrado1 newQuad = tela.create();
-                    dao.create(newQuad);
+                    Texto ne = tela.create();
+                    dao.create(ne);
 
                     break;
                 case EDITAR:
 //                    p.soutln("digite o novo valor do quadrado ");
-                    Quadrado1 recebe = tela.create();
-                    Quadrado1 newquad = tela.update(recebe);
+                    Texto recebe = tela.create();
+                    Texto ned = tela.update(recebe);
                     break;
                 case LISTAR:
                     for (int i = 0; i < dao.ds.length; i++) {
@@ -65,29 +65,29 @@ public class QuadradoController implements Iquadrado {
         return MenuEnuns.SAIR;
     }
 
+
     @Override
-    public Quadrado1 create() {
+    public Texto create() {
         return null;
     }
 
     @Override
-    public void read(Quadrado1 conta) {
+    public void read(Texto conta) {
 
     }
 
     @Override
-    public Quadrado1 update(Quadrado1 cliSalvar) {
+    public Retangulo update(Texto cliSalvar) {
         return null;
     }
 
     @Override
-    public Boolean delete(Quadrado1 cliDeletar) {
+    public Boolean delete(Texto cliDeletar) {
         return null;
     }
 
     @Override
-    public void list(Quadrado1[] listas) {
+    public void list(Texto[] listas) {
 
     }
-
 }

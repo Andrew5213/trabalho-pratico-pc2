@@ -1,4 +1,4 @@
-package paint_AndrewOficial.controlador;
+package paint_AndrewOficial.controlador.ControladorFig;
 
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.modelo.Quadrado1;

@@ -1,5 +1,6 @@
 package paint_AndrewOficial.View;
 
+import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.modelo.Texto;
 
 public class MenuTexto extends MenuPrincipal  {
@@ -16,32 +17,71 @@ public class MenuTexto extends MenuPrincipal  {
     protected int opcao1;;
    protected String palavra;
 
-   public Texto CriarTexto(){
-       System.out.println("digite uma palavra  ");
-       String guambiarra=in.nextLine();
-       String palavra= in.nextLine();
-       Texto tx = new Texto(palavra);
-       return tx;
 
-   }
-   public int  SubMenu(){
+    public Texto create() {
 
+        System.out.println("digite uma palavra  ");
+        String guambiarra=in.nextLine();
+        String palavra= in.nextLine();
+        Texto tx = new Texto(palavra);
+        return tx;
+    }
 
-           System.out.println("1-NOVO\n"+// no caso um quadrado
-                   "2-EDITAR\n"+
-                   "3-listar\n"+// no caso listar os quadrados
-                   "4-apagar \n"+//um unico item
-                   "-excluir\n");
+    // @Override
 
+    public void read(Texto Texto) {
 
-          setOpcao1(in.nextInt());
+        System.out.println(Texto);
+    }
 
+    //@Override
+    public Texto update(Texto Texto) {
+        read(Texto);
+        //Quadrado quad = this.create();
 
-          return getOpcao1();
+        // COlegar valores novos do Quadrado
+        return null;
+    }
 
+    //@Override
+    public Boolean delete(Texto quadrado) {
+        read(quadrado);
+        //DEseja realemte apagar?
+        return null;
+    }
 
+    //@Override
+    public void list(Texto[] listas) {
+        for (Texto quad : listas) {
+            System.out.println(quad);
+        }
 
-           }
+    }
+   public MenuEnuns  SubMenu() {
+       //Loop até entregar uma opção válida
+       System.out.println("Digite uma opção \n" +
+               "1 - Criar\n" +
+               "2 - Editar\n" +
+               "6 - Apagar\n" +
+               "7 - Listar\n" +
+               "0 - Sair");
+
+       int opcao = in.nextInt();
+
+       switch (opcao){
+           case 1:
+               return MenuEnuns.CRIAR;
+           case 2:
+               return MenuEnuns.EDITAR;
+           case 3:
+               return MenuEnuns.APAGAR;
+           case 0:
+               return MenuEnuns.SAIR;
+           case 7:
+               return MenuEnuns.LISTAR;
+           default:
+               return MenuEnuns.SAIR;
        }
-
+   }
+   }
 

@@ -1,42 +1,41 @@
 package paint_AndrewOficial.controlador;
 
-import paint_AndrewOficial.controlador.ControladorFig.Iquadrado;
 import paint_AndrewOficial.View.MenuPrincipal;
 import paint_AndrewOficial.View.MenuQuadrado;
-import paint_AndrewOficial.View.QuadradoCli;
+import paint_AndrewOficial.View.MenuRetangulo;
 import paint_AndrewOficial.View.enums.MenuEnuns;
+import paint_AndrewOficial.controlador.ControladorFig.IRetangulo;
 import paint_AndrewOficial.dao.FigGeometricaDao;
-import paint_AndrewOficial.modelo.Quadrado1;
+import paint_AndrewOficial.modelo.Retangulo;
 
-public class QuadradoController implements Iquadrado {
+public class RetanguloController implements IRetangulo {
     MenuPrincipal p = new MenuPrincipal();
-    QuadradoCli tela = new QuadradoCli();
+    MenuRetangulo tela = new MenuRetangulo();
     private FigGeometricaDao dao;
 
-    public QuadradoController(FigGeometricaDao dao) {
-        QuadradoCli tela = new QuadradoCli();
+    public RetanguloController(FigGeometricaDao dao) {
+        MenuRetangulo tela = new MenuRetangulo();
         this.dao = dao;
     }
-
     @Override
     public MenuEnuns start() {
 
         MenuEnuns opcao;
         do {
-            opcao = tela.menuPrincipal();
+            opcao = tela.MenuRet();
 
             p.soutln("escolhi: " + opcao + "\n\n");
 
             switch (opcao) {
                 case CRIAR:
-                    Quadrado1 newQuad = tela.create();
-                    dao.create(newQuad);
+                    Retangulo ne = tela.create();
+                    dao.create(ne);
 
                     break;
                 case EDITAR:
 //                    p.soutln("digite o novo valor do quadrado ");
-                    Quadrado1 recebe = tela.create();
-                    Quadrado1 newquad = tela.update(recebe);
+                    Retangulo recebe = tela.create();
+                    Retangulo ned = tela.update(recebe);
                     break;
                 case LISTAR:
                     for (int i = 0; i < dao.ds.length; i++) {
@@ -66,28 +65,27 @@ public class QuadradoController implements Iquadrado {
     }
 
     @Override
-    public Quadrado1 create() {
+    public Retangulo create() {
         return null;
     }
 
     @Override
-    public void read(Quadrado1 conta) {
+    public void read(Retangulo conta) {
 
     }
 
     @Override
-    public Quadrado1 update(Quadrado1 cliSalvar) {
+    public Retangulo update(Retangulo cliSalvar) {
         return null;
     }
 
     @Override
-    public Boolean delete(Quadrado1 cliDeletar) {
+    public Boolean delete(Retangulo cliDeletar) {
         return null;
     }
 
     @Override
-    public void list(Quadrado1[] listas) {
+    public void list(Retangulo[] listas) {
 
     }
-
 }
