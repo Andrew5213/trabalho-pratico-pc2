@@ -1,10 +1,10 @@
-package paint_AndrewOficial.controlador;
+package paint_AndrewOficial.controlador.ControllerFig;
 
 import paint_AndrewOficial.View.MenuPrincipal;
 import paint_AndrewOficial.View.MenuQuadrado;
 import paint_AndrewOficial.View.MenuRetangulo;
 import paint_AndrewOficial.View.enums.MenuEnuns;
-import paint_AndrewOficial.controlador.ControladorFig.IRetangulo;
+import paint_AndrewOficial.controlador.ControladorInterface.IRetangulo;
 import paint_AndrewOficial.dao.FigGeometricaDao;
 import paint_AndrewOficial.modelo.Retangulo;
 

@@ -1,4 +1,6 @@
 package paint_AndrewOficial.controlador;
+
+import paint_AndrewOficial.controlador.ControllerFig.*;
 import paint_AndrewOficial.View.gui.*;
 import paint_AndrewOficial.View.*;
 import paint_AndrewOficial.View.enums.MenuEnuns;
@@ -9,6 +11,7 @@ import paint_AndrewOficial.modelo.Texto;
 import trabalho_pratico.model.Ponto;
 
 import java.util.ArrayList;
+
 public class principal {
     //private FiguraGeometricaDAO dao;
     private IMenuPaintView tela;
@@ -16,37 +19,39 @@ public class principal {
     private QuadradoController qc;
     private RetanguloController rect;
     private TextoController txx;
+    private PontoController ptt;
+    private CirculoController ccc;
     MenuPrincipal m1 = new MenuPrincipal();
     MenuEnuns opcao = MenuEnuns.LISTAR;
 
 
-    MenuPonto p1 = new MenuPonto();
     MenuCirculo c1 = new MenuCirculo();
     MenuTriangulo t1 = new MenuTriangulo();
     MenuLosangulo l1 = new MenuLosangulo();
     MenuReta r = new MenuReta();
-    MenuTrapezio t11= new MenuTrapezio();
+    MenuTrapezio t11 = new MenuTrapezio();
     Paint_Janela p11 = new Paint_Janela();
-    MenuDesenhos d1= new MenuDesenhos();
-    MenuTexto tx = new MenuTexto();
-    FigGeometricaDao d =new FigGeometricaDao(10);
+    MenuDesenhos d1 = new MenuDesenhos();
+    FigGeometricaDao d = new FigGeometricaDao(10);
     private FigGeometrica[] vetor;
     private Texto[] vet;
 
-    public principal(){
-
-        vetor= new FigGeometrica[10];
+    public principal() {
+        ptt = new PontoController(dao);
+        vetor = new FigGeometrica[10];
         dao = new FigGeometricaDao(10);
         qc = new QuadradoController(dao);
-        rect= new RetanguloController(dao);
-        txx= new TextoController(dao);
+        rect = new RetanguloController(dao);
+        txx = new TextoController(dao);
+        ccc=new CirculoController(dao);
     }
+
     public boolean insertFigGeométrica(FigGeometrica fig) {
-        for (int i=0;i< vetor.length;i++){
-            if(vetor[i]==null) {
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] == null) {
                 vetor[i] = fig;
                 return true;
-            }else{
+            } else {
                 m1.soutln("vetor esta cheio ");// excessao
 
             }
@@ -55,6 +60,7 @@ public class principal {
         return false;
 
     }
+
     public void Exe() {
         do {
 
@@ -67,66 +73,26 @@ public class principal {
                     m1.soutln("digite qual e a figura q sera apagada ");
                     MenuQuadrado q = new MenuQuadrado();
                     q.receber();
-                    dao.ds[q.getA()]=null;
+                    dao.ds[q.getA()] = null;
                     m1.soutln("apagada com sucesso ");
                     break;
                 case QUADRADO:
                     qc.start();
                     break;
                 case RETANGULO:
-                    //  insertFigGeométrica(r2.CriaRetangulo());
                     rect.start();
-                    // m1.soutln("retangulo criado");
-
-
-
                     break;
                 case CIRCULO:
-                    c1.MenuCirc();
-                    switch (c1.getOpcao()){
-                        case 1://novo
-                            insertFigGeométrica(c1.CriarCirculo());
-                            //d.create(c1.CriarCirculo());
-                            m1.soutln("circulo  criado");
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            break;
-                        case 0:
-                            break;
-                    }
+
+                    ccc.start();
                     break;
                 case PONTO:
-                    p1.MenuPonto();
-
-                    switch (p1.getOpcao()){
-                        case 1://novo
-                            insertFigGeométrica(p1.CriarPonto());
-                            //d.create(p1.CriarPonto());
-                            m1.soutln("ponto  criado");
-                            break;
-                        case 2:
-
-                            break;
-                        case 3:
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            break;
-                        case 0:
-                            break;
-                    }
+                    ptt.start();
 
                     break;
                 case TRIANGULO:
                     t1.MenuTrian();
-                    switch (t1.getOpcao()){
+                    switch (t1.getOpcao()) {
                         case 1://novo
                             insertFigGeométrica(t1.CriarTriangulo());
                             //d.create(t1.CriarTriangulo());
@@ -147,7 +113,7 @@ public class principal {
                     break;
                 case LOSANGULO:
                     l1.MenuLosan();
-                    switch (l1.getOpcao()){
+                    switch (l1.getOpcao()) {
                         case 1://novo
                             insertFigGeométrica(l1.CriarLosangulo());
                             // d.create(l1.CriarLosangulo());
@@ -167,7 +133,7 @@ public class principal {
                     break;
 
                 case TEXTO:
-                   txx.start();
+                    txx.start();
 
 
                     break;
@@ -180,7 +146,7 @@ public class principal {
 
                 case RETA:
                     r.MenuReta();
-                    switch (r.getOpcao()){
+                    switch (r.getOpcao()) {
                         case 1://novo
                             insertFigGeométrica(r.CriarReta());
                             //d.create(r.CriarReta());
@@ -199,8 +165,8 @@ public class principal {
                     }
                     break;
                 case LISTAR:
-                    for (int i=0;i< vetor.length;i++){
-                        if(vetor[i]!=null) {
+                    for (int i = 0; i < vetor.length; i++) {
+                        if (vetor[i] != null) {
                             m1.soutln(vetor[i].toString());
                         }
                     }
@@ -211,7 +177,7 @@ public class principal {
 
                 case DESENHAR:
                     d1.Escolha();
-                    switch (d1.getI()){
+                    switch (d1.getI()) {
                         case 1:
                             p11.PintarQuadrado();
                             break;
@@ -240,7 +206,8 @@ public class principal {
             }
         } while (opcao != MenuEnuns.SAIR);
     }
-    public void testandoArrayList(){
+
+    public void testandoArrayList() {
         ArrayList lista = new ArrayList();
         lista.add(1);
         lista.add("dsdsdsd");
