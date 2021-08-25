@@ -1,16 +1,15 @@
 package paint_AndrewOficial.controlador;
 
-import paint_AndrewOficial.controlador.ControllerFig.*;
-import paint_AndrewOficial.View.gui.*;
-import paint_AndrewOficial.View.*;
+import paint_AndrewOficial.View.MenuDesenhos;
+import paint_AndrewOficial.View.MenuPrincipal;
+import paint_AndrewOficial.View.MenuQuadrado;
+import paint_AndrewOficial.View.Paint_Janela;
 import paint_AndrewOficial.View.enums.MenuEnuns;
+import paint_AndrewOficial.View.gui.IMenuPaintView;
+import paint_AndrewOficial.controlador.ControllerFig.*;
 import paint_AndrewOficial.dao.FigGeometricaDao;
 import paint_AndrewOficial.modelo.FigGeometrica;
-import paint_AndrewOficial.modelo.Quadrado1;
 import paint_AndrewOficial.modelo.Texto;
-import trabalho_pratico.model.Ponto;
-
-import java.util.ArrayList;
 
 public class principal {
     //private FiguraGeometricaDAO dao;
@@ -21,45 +20,33 @@ public class principal {
     private TextoController txx;
     private PontoController ptt;
     private CirculoController ccc;
+    private RetaController rtt;
+    private TrianguloController trian;
+    private LosanguloController losa;
     MenuPrincipal m1 = new MenuPrincipal();
     MenuEnuns opcao = MenuEnuns.LISTAR;
+    private TrapezioController trap;
 
-
-    MenuCirculo c1 = new MenuCirculo();
-    MenuTriangulo t1 = new MenuTriangulo();
-    MenuLosangulo l1 = new MenuLosangulo();
-    MenuReta r = new MenuReta();
-    MenuTrapezio t11 = new MenuTrapezio();
     Paint_Janela p11 = new Paint_Janela();
     MenuDesenhos d1 = new MenuDesenhos();
-    FigGeometricaDao d = new FigGeometricaDao(10);
     private FigGeometrica[] vetor;
     private Texto[] vet;
 
     public principal() {
+        trap = new TrapezioController(dao);
+        losa = new LosanguloController(dao);
+        trian = new TrianguloController(dao);
         ptt = new PontoController(dao);
         vetor = new FigGeometrica[10];
         dao = new FigGeometricaDao(10);
         qc = new QuadradoController(dao);
         rect = new RetanguloController(dao);
         txx = new TextoController(dao);
-        ccc=new CirculoController(dao);
+        ccc = new CirculoController(dao);
+        rtt = new RetaController(dao);
     }
 
-    public boolean insertFigGeométrica(FigGeometrica fig) {
-        for (int i = 0; i < vetor.length; i++) {
-            if (vetor[i] == null) {
-                vetor[i] = fig;
-                return true;
-            } else {
-                m1.soutln("vetor esta cheio ");// excessao
 
-            }
-
-        }
-        return false;
-
-    }
 
     public void Exe() {
         do {
@@ -91,45 +78,10 @@ public class principal {
 
                     break;
                 case TRIANGULO:
-                    t1.MenuTrian();
-                    switch (t1.getOpcao()) {
-                        case 1://novo
-                            insertFigGeométrica(t1.CriarTriangulo());
-                            //d.create(t1.CriarTriangulo());
-                            m1.soutln("triangulo   criado");
-                            break;
-                        case 2:
-
-                            break;
-                        case 3:
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            break;
-                        case 0:
-                            break;
-                    }
+                    trian.start();
                     break;
                 case LOSANGULO:
-                    l1.MenuLosan();
-                    switch (l1.getOpcao()) {
-                        case 1://novo
-                            insertFigGeométrica(l1.CriarLosangulo());
-                            // d.create(l1.CriarLosangulo());
-                            m1.soutln("losangulo   criado");
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            break;
-                        case 0:
-                            break;
-                    }
+                    losa.start();
                     break;
 
                 case TEXTO:
@@ -145,32 +97,12 @@ public class principal {
                     break;
 
                 case RETA:
-                    r.MenuReta();
-                    switch (r.getOpcao()) {
-                        case 1://novo
-                            insertFigGeométrica(r.CriarReta());
-                            //d.create(r.CriarReta());
-                            m1.soutln("reta    criada");
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            break;
-                        case 0:
-                            break;
-                    }
+                    rtt.start();
                     break;
                 case LISTAR:
-                    for (int i = 0; i < vetor.length; i++) {
-                        if (vetor[i] != null) {
-                            m1.soutln(vetor[i].toString());
-                        }
-                    }
-                    d.getItens();
+
+                    dao.Listar();
+                    //d.getItens();
 
 
                     break;
@@ -200,24 +132,13 @@ public class principal {
                 case SAIR:
                     break;
                 case TRAPEZIO:
-                    insertFigGeométrica(t11.CriaTrapezio());
+                    trap.start();
                     break;
                 default:
             }
         } while (opcao != MenuEnuns.SAIR);
     }
 
-    public void testandoArrayList() {
-        ArrayList lista = new ArrayList();
-        lista.add(1);
-        lista.add("dsdsdsd");
-        lista.add(new Ponto());
-        lista.add(new ArrayList());
-        m1.soutln("------------TESTE parametrico---------------");
-        ArrayList<FigGeometrica> listaFig = new ArrayList();
-        listaFig.add(new Quadrado1(1));
-        m1.soutln("");
-        m1.soutln("------------FIM TESTE---------------");
-    }
+
 
 }

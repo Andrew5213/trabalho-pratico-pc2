@@ -1,19 +1,20 @@
 package paint_AndrewOficial.controlador.ControllerFig;
 
-import paint_AndrewOficial.View.*;
+import paint_AndrewOficial.View.MenuLosangulo;
+import paint_AndrewOficial.View.MenuPrincipal;
+import paint_AndrewOficial.View.MenuQuadrado;
 import paint_AndrewOficial.View.enums.MenuEnuns;
-import paint_AndrewOficial.controlador.ControladorInterface.Itriangulo;
+import paint_AndrewOficial.controlador.ControladorInterface.Ilosangulo;
 import paint_AndrewOficial.dao.FigGeometricaDao;
-import paint_AndrewOficial.modelo.Circulo;
-import paint_AndrewOficial.modelo.Triangulo;
+import paint_AndrewOficial.modelo.Losangulo;
 
-public class TrianguloController implements Itriangulo {
-
+public class LosanguloController implements Ilosangulo {
     MenuPrincipal p = new MenuPrincipal();
-    MenuTriangulo tela = new MenuTriangulo();
+    MenuLosangulo tela = new MenuLosangulo();
     private FigGeometricaDao dao;
-    public TrianguloController(FigGeometricaDao dao) {
-        MenuTriangulo tela = new MenuTriangulo();
+
+    public LosanguloController(FigGeometricaDao dao) {
+        MenuLosangulo tela = new MenuLosangulo();
         this.dao = dao;
     }
     @Override
@@ -21,20 +22,20 @@ public class TrianguloController implements Itriangulo {
 
         MenuEnuns opcao;
         do {
-            opcao = tela.Menuprinc();
+            opcao = tela.MenuLosan();
 
             p.soutln("escolhi: " + opcao + "\n\n");
 
             switch (opcao) {
                 case CRIAR:
-                    Triangulo newQuad = tela.create();
+                    Losangulo newQuad = tela.create();
                     dao.create(newQuad);
 
                     break;
                 case EDITAR:
 //                    p.soutln("digite o novo valor do quadrado ");
-                    Triangulo  recebe = tela.create();
-                    Triangulo  newquad = tela.update(recebe);
+                    Losangulo recebe = tela.create();
+                    Losangulo newquad = tela.update(recebe);
                     break;
                 case LISTAR:
                     for (int i = 0; i < dao.ds.length; i++) {
@@ -62,30 +63,28 @@ public class TrianguloController implements Itriangulo {
 
         return MenuEnuns.SAIR;
     }
-
-
     @Override
-    public Triangulo create() {
+    public Losangulo create() {
         return null;
     }
 
     @Override
-    public void read(Triangulo conta) {
+    public void read(Losangulo conta) {
 
     }
 
     @Override
-    public Circulo update(Triangulo cliSalvar) {
+    public Losangulo update(Losangulo cliSalvar) {
         return null;
     }
 
     @Override
-    public Boolean delete(Triangulo cliDeletar) {
+    public Boolean delete(Losangulo cliDeletar) {
         return null;
     }
 
     @Override
-    public void list(Triangulo[] listas) {
+    public void list(Losangulo[] listas) {
 
     }
 }

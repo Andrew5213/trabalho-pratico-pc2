@@ -1,21 +1,24 @@
 package paint_AndrewOficial.controlador.ControllerFig;
 
-import paint_AndrewOficial.View.*;
+import paint_AndrewOficial.View.MenuPrincipal;
+import paint_AndrewOficial.View.MenuQuadrado;
+import paint_AndrewOficial.View.MenuTrapezio;
 import paint_AndrewOficial.View.enums.MenuEnuns;
-import paint_AndrewOficial.controlador.ControladorInterface.Itriangulo;
+import paint_AndrewOficial.controlador.ControladorInterface.Itrapezeio;
 import paint_AndrewOficial.dao.FigGeometricaDao;
-import paint_AndrewOficial.modelo.Circulo;
-import paint_AndrewOficial.modelo.Triangulo;
+import paint_AndrewOficial.modelo.Ponto;
+import paint_AndrewOficial.modelo.Trapezio;
 
-public class TrianguloController implements Itriangulo {
+public class TrapezioController implements Itrapezeio {
 
     MenuPrincipal p = new MenuPrincipal();
-    MenuTriangulo tela = new MenuTriangulo();
+    MenuTrapezio tela = new MenuTrapezio();
     private FigGeometricaDao dao;
-    public TrianguloController(FigGeometricaDao dao) {
-        MenuTriangulo tela = new MenuTriangulo();
+    public TrapezioController(FigGeometricaDao dao) {
+        MenuTrapezio tela = new MenuTrapezio();
         this.dao = dao;
     }
+
     @Override
     public MenuEnuns start() {
 
@@ -27,14 +30,14 @@ public class TrianguloController implements Itriangulo {
 
             switch (opcao) {
                 case CRIAR:
-                    Triangulo newQuad = tela.create();
+                    Trapezio newQuad = tela.create();
                     dao.create(newQuad);
 
                     break;
                 case EDITAR:
 //                    p.soutln("digite o novo valor do quadrado ");
-                    Triangulo  recebe = tela.create();
-                    Triangulo  newquad = tela.update(recebe);
+                    Trapezio  recebe = tela.create();
+                    Trapezio  newquad = tela.update(recebe);
                     break;
                 case LISTAR:
                     for (int i = 0; i < dao.ds.length; i++) {
@@ -63,29 +66,28 @@ public class TrianguloController implements Itriangulo {
         return MenuEnuns.SAIR;
     }
 
-
     @Override
-    public Triangulo create() {
+    public Ponto create() {
         return null;
     }
 
     @Override
-    public void read(Triangulo conta) {
+    public void read(Ponto conta) {
 
     }
 
     @Override
-    public Circulo update(Triangulo cliSalvar) {
+    public Ponto update(Ponto cliSalvar) {
         return null;
     }
 
     @Override
-    public Boolean delete(Triangulo cliDeletar) {
+    public Boolean delete(Ponto cliDeletar) {
         return null;
     }
 
     @Override
-    public void list(Triangulo[] listas) {
+    public void list(Ponto[] listas) {
 
     }
 }
