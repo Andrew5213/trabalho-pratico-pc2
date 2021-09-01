@@ -2,11 +2,13 @@ package paint_AndrewOficial.View;
 
 
 import paint_AndrewOficial.View.enums.MenuEnuns;
+import paint_AndrewOficial.controlador.AbstractCRUDController;
 import paint_AndrewOficial.modelo.Quadrado1;
 
 import java.util.Scanner;
 
-public class QuadradoCli extends MenuPrincipal  {
+public class QuadradoCli extends AbstractCRUDController implements  ICRUDFiguraView<Quadrado1> {
+
     Scanner in = new Scanner(System.in);
 
     public MenuEnuns menuPrincipal(){
@@ -46,7 +48,12 @@ public class QuadradoCli extends MenuPrincipal  {
 
     }
 
-   // @Override
+    @Override
+    public void read(Object conta) {
+
+    }
+
+    // @Override
 
     public void read(Quadrado1 quadrado) {
 

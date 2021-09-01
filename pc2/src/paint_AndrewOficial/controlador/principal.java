@@ -13,6 +13,7 @@ import paint_AndrewOficial.modelo.Texto;
 
 public class principal {
     //private FiguraGeometricaDAO dao;
+    private AbstractCRUDController quadController;
     private IMenuPaintView tela;
     private FigGeometricaDao dao;
     private QuadradoController qc;
