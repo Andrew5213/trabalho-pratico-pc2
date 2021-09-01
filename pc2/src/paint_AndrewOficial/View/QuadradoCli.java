@@ -1,85 +1,58 @@
 package paint_AndrewOficial.View;
 
-
-import paint_AndrewOficial.View.enums.MenuEnuns;
-import paint_AndrewOficial.controlador.AbstractCRUDController;
+import paint_AndrewOficial.View.gui.AbstractCRUDCli;
 import paint_AndrewOficial.modelo.Quadrado1;
 
-import java.util.Scanner;
-
-public class QuadradoCli extends AbstractCRUDController implements  ICRUDFiguraView<Quadrado1> {
-
-    Scanner in = new Scanner(System.in);
-
-    public MenuEnuns menuPrincipal(){
-        //Loop até entregar uma opção válida
-        System.out.println("Digite uma opção \n" +
-                "1 - Criar\n" +
-                "2 - Editar\n" +
-                "6 - Apagar\n" +
-                "7 - Listar\n" +
-                "0 - Sair");
-
-        int opcao = in.nextInt();
-
-        switch (opcao){
-            case 1:
-                return MenuEnuns.CRIAR;
-            case 2:
-                return MenuEnuns.EDITAR;
-            case 3:
-                return MenuEnuns.APAGAR;
-            case 0:
-                return MenuEnuns.SAIR;
-            case 7:
-                return MenuEnuns.LISTAR;
-            default:
-                return MenuEnuns.SAIR;
-        }
-    }
-
-    //@Override
-    public Quadrado1 create() {
-        System.out.println("Digite um interio para o tamanho do lado do quadrado");
-        int tamanho  = in.nextInt();
-        Quadrado1 quad = new Quadrado1(tamanho);
-
-        return quad;
+public class QuadradoCli extends AbstractCRUDCli<Quadrado1>
+            implements ICRUDFiguraView<Quadrado1> {
+    @Override
+    public void showMessage(String msg) {
 
     }
 
     @Override
-    public void read(Object conta) {
+    public void showLineMessage(String msg) {
 
     }
 
-    // @Override
-
-    public void read(Quadrado1 quadrado) {
-
-        System.out.println(quadrado);
+    @Override
+    public int askForInt(String question) {
+        return 0;
     }
 
-    //@Override
-    public Quadrado1 update(Quadrado1 quadrado) {
-        read(quadrado);
-        //Quadrado quad = this.create();
+    @Override
+    public double askForDouble(String question) {
+        return 0;
+    }
 
-        // COlegar valores novos do Quadrado
+    @Override
+    public String askForString(String question) {
         return null;
     }
 
-    //@Override
-    public Boolean delete(Quadrado1 quadrado) {
-        read(quadrado);
-        //DEseja realemte apagar?
+    @Override
+    public boolean hasNextInt() {
+        return false;
+    }
+
+    @Override
+    public Quadrado1 create() {
+        System.out.println("digite o lado do quadrado");
+        int lado=in.nextInt();
+        Quadrado1 q1 = new Quadrado1(lado);
+        return q1;
+
+    }
+
+    @Override
+    public void read(Quadrado1 conta) {
+        System.out.println(conta);
+
+    }
+
+    @Override
+    public Quadrado1 update(Quadrado1 toSabe) {
         return null;
     }
 
-    //@Override
-    public void list(Quadrado1[] listas) {
-        for (Quadrado1 quad: listas){
-            System.out.println(quad);
-        }
-    }
 }

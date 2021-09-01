@@ -14,15 +14,15 @@ import paint_AndrewOficial.modelo.Texto;
 public class principal {
     //private FiguraGeometricaDAO dao;
     private AbstractCRUDController quadController;
+    private AbstractCRUDController trian;
     private IMenuPaintView tela;
     private FigGeometricaDao dao;
-    private QuadradoController qc;
+  //  private QuadradoController qc;
     private RetanguloController rect;
     private TextoController txx;
     private PontoController ptt;
     private CirculoController ccc;
     private RetaController rtt;
-    private TrianguloController trian;
     private LosanguloController losa;
     MenuPrincipal m1 = new MenuPrincipal();
     MenuEnuns opcao = MenuEnuns.LISTAR;
@@ -36,11 +36,15 @@ public class principal {
     public principal() {
         trap = new TrapezioController(dao);
         losa = new LosanguloController(dao);
-        trian = new TrianguloController(dao);
+
         ptt = new PontoController(dao);
         vetor = new FigGeometrica[10];
         dao = new FigGeometricaDao(10);
-        qc = new QuadradoController(dao);
+      //  qc = new QuadradoController(dao);
+        quadController =new QuadradoController(dao) ;
+        trian= new TrianguloController(dao);
+
+
         rect = new RetanguloController(dao);
         txx = new TextoController(dao);
         ccc = new CirculoController(dao);
@@ -65,7 +69,7 @@ public class principal {
                     m1.soutln("apagada com sucesso ");
                     break;
                 case QUADRADO:
-                    qc.start();
+                    quadController.start();
                     break;
                 case RETANGULO:
                     rect.start();

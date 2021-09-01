@@ -10,7 +10,6 @@ public interface iCrudController<T> {
     public void read(T conta);
     public T update(T cliSalvar);
     public Boolean delete(T cliDeletar);
-
     public void list(T[] listas);
 
 

@@ -1,45 +1,13 @@
 package paint_AndrewOficial.View;
 
-import paint_AndrewOficial.View.enums.MenuEnuns;
+import paint_AndrewOficial.View.gui.AbstractCRUDCli;
 import paint_AndrewOficial.modelo.Triangulo;
 
-public class MenuTriangulo extends MenuPrincipal{
-    protected int opcao;
+public class MenuTriangulo  extends AbstractCRUDCli<Triangulo>
+            implements ICRUDFiguraView<Triangulo>{
 
-    public int getOpcao() {
-        return opcao;
-    }
 
-    public void setOpcao(int opcao) {
-        this.opcao = opcao;
-    }
 
-    public MenuEnuns MenuTrian(){
-        //Loop até entregar uma opção válida
-        System.out.println("Digite uma opção \n" +
-                "1 - Criar\n" +
-                "2 - Editar\n" +
-                "6 - Apagar\n" +
-                "7 - Listar\n" +
-                "0 - Sair");
-
-        int opcao = in.nextInt();
-
-        switch (opcao) {
-            case 1:
-                return MenuEnuns.CRIAR;
-            case 2:
-                return MenuEnuns.EDITAR;
-            case 3:
-                return MenuEnuns.APAGAR;
-            case 0:
-                return MenuEnuns.SAIR;
-            case 7:
-                return MenuEnuns.LISTAR;
-            default:
-                return MenuEnuns.SAIR;
-        }
-    }
     public Triangulo create() {
 
         System.out.println("ola vamos criar um triangulo ");
@@ -57,35 +25,45 @@ public class MenuTriangulo extends MenuPrincipal{
         }while(lado1>=lado2+lado3 || lado2>=lado1+lado3 || lado3>=lado1+lado2 );
     }
 
-    // @Override
 
-    public void read(Triangulo retangulo) {
-
-        System.out.println(retangulo);
+    public void read(Triangulo conta) {
+        System.out.println(conta);
     }
 
-    //@Override
-    public Triangulo update(Triangulo quadrado) {
-        read(quadrado);
-        //Quadrado quad = this.create();
-
-        // COlegar valores novos do Quadrado
+    @Override
+    public Triangulo update(Triangulo toSabe) {
         return null;
     }
 
-    //@Override
-    public Boolean delete(Triangulo quadrado) {
-        read(quadrado);
-        //DEseja realemte apagar?
+
+    @Override
+    public void showMessage(String msg) {
+
+    }
+
+    @Override
+    public void showLineMessage(String msg) {
+
+    }
+
+    @Override
+    public int askForInt(String question) {
+        return 0;
+    }
+
+    @Override
+    public double askForDouble(String question) {
+        return 0;
+    }
+
+    @Override
+    public String askForString(String question) {
         return null;
     }
 
-    //@Override
-    public void list(Triangulo[] listas) {
-        for (Triangulo quad : listas) {
-            System.out.println(quad);
-        }
-
+    @Override
+    public boolean hasNextInt() {
+        return false;
     }
 }
 

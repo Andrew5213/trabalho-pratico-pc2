@@ -6,50 +6,52 @@ import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.dao.FigGeometricaDao;
 import paint_AndrewOficial.modelo.FigGeometrica;
 import paint_AndrewOficial.modelo.Quadrado1;
-import paint_AndrewOficial.modelo.Reta;
 
 import java.util.ArrayList;
+
+//import paint_AndrewOficial.View.MenuPrincipal;
 
 public abstract class AbstractCRUDController<T> implements  iCrudController<T>{
     protected ICRUDFiguraView<T> tela;
     private FigGeometricaDao dao;
 
+
     public AbstractCRUDController(FigGeometricaDao dao) {
         this.dao = dao;
     }
-
     public MenuEnuns start() {
-
         MenuEnuns opcao;
         do {
             opcao = tela.menuPrincipal();
 
-            p.soutln("escolhi: " + opcao + "\n\n");
+            tela.showMessage("escolhi: " + opcao + "\n\n");
 
             switch (opcao) {
                 case CRIAR:
                     T newQuad = tela.create();
-                    dao.create(newQuad);
+                    dao.create((FigGeometrica) newQuad);
 
                     break;
                 case EDITAR:
-//                    p.soutln("digite o novo valor do quadrado ");
-                    Reta recebe = tela.create();
-                    Reta newquad = tela.update(recebe);
+                    tela.showMessage("digite o novo valor do quadrado ");
+                    T recebe = tela.create();
+                    T newquad = tela.update(recebe);
                     break;
                 case LISTAR:
-                    for (int i = 0; i < dao.ds.length; i++) {
-                        if (dao.ds[i] != null) {
-                            p.soutln(dao.ds[i].toString());
+                    ArrayList<Quadrado1> lista = new ArrayList<Quadrado1>();
+                    for (FigGeometrica fig: dao.getItens()){
+                        if( fig instanceof Quadrado1){
+                            lista.add((Quadrado1) fig);
                         }
                     }
+                    tela.list((T[]) lista.toArray());
 
                     break;
                 case MOSTRAR:
-                    p.soutln("digite a id que sera mostrado");
+                    tela.showMessage("digite a id que sera mostrado");
                     MenuQuadrado q = new MenuQuadrado();
                     q.receber();
-                    p.soutln(dao.ds[q.getA()].toString());
+                    tela.showMessage(dao.ds[q.getA()].toString());
                     break;
 
 

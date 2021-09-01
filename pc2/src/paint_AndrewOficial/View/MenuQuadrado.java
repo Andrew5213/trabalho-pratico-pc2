@@ -21,18 +21,7 @@ public class MenuQuadrado extends MenuPrincipal{
         this.opcao = opcao;
     }
 
-    public int MenuQuad(){
-        int opcao1;
-        System.out.println("1-NOVO\n"+// no caso um quadrado
-                "2-EDITAR\n"+
-                "3-listar\n"+// no caso listar os quadrados
-                "4-mostrar\n"+//um unico item
-                "5-excluir\n" +
-                "0-sair");
-        opcao1=in.nextInt();
-        setOpcao(opcao1);
-        return getOpcao();
-    }
+
     public Quadrado1 CriarQuadrado(){
         System.out.println("digite o lado do quadrado");
         int lado=in.nextInt();
