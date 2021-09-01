@@ -35,7 +35,7 @@ public abstract class AbstractCRUDController<T> implements  iCrudController<T>{
                 case EDITAR:
                     tela.showMessage("digite o novo valor do quadrado ");
                     T recebe = tela.create();
-                    T newquad = tela.update(recebe);
+                //    T newquad = tela.update(recebe);
                     break;
                 case LISTAR:
                     ArrayList<Quadrado1> lista = new ArrayList<Quadrado1>();
