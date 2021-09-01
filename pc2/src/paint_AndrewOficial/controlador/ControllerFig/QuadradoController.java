@@ -12,4 +12,5 @@ public class QuadradoController extends AbstractCRUDController<Quadrado1> {
   }
 
 
+
 }

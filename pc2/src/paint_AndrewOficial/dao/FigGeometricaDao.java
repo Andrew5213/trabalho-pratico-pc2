@@ -28,11 +28,9 @@ public class FigGeometricaDao {
             if (ds[i] == null) {
                 ds[i] = fig;
                 return true;
-            } else {
-                m1.soutln("vetor esta cheio ");// excessao
-
             }
-        }
+            }
+            m1.soutln("o vetor esta cheio");
         return false;
     }
     public FigGeometrica read(int codig){

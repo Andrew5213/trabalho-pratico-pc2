@@ -33,18 +33,20 @@ public abstract class AbstractCRUDController<T> implements  iCrudController<T>{
 
                     break;
                 case EDITAR:
-                    tela.showMessage("digite o novo valor do quadrado ");
+                  //  tela.showMessage("digite o novo valor do quadrado ");
                     T recebe = tela.create();
-                //    T newquad = tela.update(recebe);
+                   T newquad = tela.update(recebe);
                     break;
                 case LISTAR:
-                    ArrayList<Quadrado1> lista = new ArrayList<Quadrado1>();
+                    ArrayList<T> lista = new ArrayList<T>();
                     for (FigGeometrica fig: dao.getItens()){
-                        if( fig instanceof Quadrado1){
-                            lista.add((Quadrado1) fig);
+                        if(fig != null){
+                            lista.add((T) fig);
                         }
                     }
-                    tela.list((T[]) lista.toArray());
+
+                        tela.list((T[]) lista.toArray());
+
 
                     break;
                 case MOSTRAR:

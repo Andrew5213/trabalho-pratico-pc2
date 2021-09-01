@@ -52,7 +52,9 @@ public class QuadradoCli extends AbstractCRUDCli<Quadrado1>
 
     @Override
     public Quadrado1 update(Quadrado1 toSabe) {
+        this.read(toSabe);
         return null;
     }
+
 
 }
