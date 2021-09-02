@@ -1,6 +1,6 @@
 package paint_AndrewOficial.controlador.ControllerFig;
 
-import paint_AndrewOficial.View.TextoCli;
+import paint_AndrewOficial.View.Cli.TextoCli;
 import paint_AndrewOficial.controlador.AbstractCRUDController;
 import paint_AndrewOficial.dao.FigGeometricaDao;
 import paint_AndrewOficial.modelo.Texto;

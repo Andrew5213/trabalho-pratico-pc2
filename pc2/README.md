@@ -19,4 +19,5 @@ de associar a classe ao vetor.
       o diagrama de classes e o diagrama de objetos. 
       6-com o uso da orienação objetos e com os polimorfimos e possivel ter uma grande organizacao do programa 
       sendo mais facil reconhecer onde ocorre um erro pois esta tudo muito bem dividido.
-   
+   #Questionario 4 e 5
+resposta 

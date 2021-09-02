@@ -1,8 +1,7 @@
-package paint_AndrewOficial.View.gui;
+package paint_AndrewOficial.View.Cli;
 
-import paint_AndrewOficial.View.ICRUDFiguraView;
-import paint_AndrewOficial.View.MenuPrincipal;
 import paint_AndrewOficial.View.enums.MenuEnuns;
+import paint_AndrewOficial.View.gui.ICRUDFiguraView;
 
 public  abstract class AbstractCRUDCli<T> extends MenuPrincipal
         implements ICRUDFiguraView<T> {

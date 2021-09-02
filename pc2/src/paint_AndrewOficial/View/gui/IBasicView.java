@@ -1,4 +1,4 @@
-package paint_AndrewOficial.View;
+package paint_AndrewOficial.View.gui;
 
 public interface IBasicView {
     public void showMessage(String msg);

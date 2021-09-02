@@ -1,4 +1,4 @@
-package paint_AndrewOficial.View;
+package paint_AndrewOficial.View.Cli;
 
 import paint_AndrewOficial.View.desenhos.*;
 

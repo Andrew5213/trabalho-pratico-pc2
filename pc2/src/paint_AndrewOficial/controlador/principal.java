@@ -1,56 +1,46 @@
 package paint_AndrewOficial.controlador;
 
-import paint_AndrewOficial.View.MenuDesenhos;
-import paint_AndrewOficial.View.MenuPrincipal;
-import paint_AndrewOficial.View.MenuQuadrado;
-import paint_AndrewOficial.View.Paint_Janela;
+import paint_AndrewOficial.View.Cli.MenuDesenhos;
+import paint_AndrewOficial.View.Cli.MenuPrincipal;
+import paint_AndrewOficial.View.Cli.MenuQuadrado;
+import paint_AndrewOficial.View.Cli.Paint_Janela;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.View.gui.IMenuPaintView;
 import paint_AndrewOficial.controlador.ControllerFig.*;
 import paint_AndrewOficial.dao.FigGeometricaDao;
 import paint_AndrewOficial.modelo.FigGeometrica;
-import paint_AndrewOficial.modelo.Texto;
 
 public class principal {
     //private FiguraGeometricaDAO dao;
     private AbstractCRUDController quadController;
     private AbstractCRUDController trian;
-    private  AbstractCRUDController rect;
+    private AbstractCRUDController rect;
+    private AbstractCRUDController txx;
+    private AbstractCRUDController ptt;
+    private AbstractCRUDController rtt;
+    private AbstractCRUDController trap;
+    private AbstractCRUDController losa;
+    private AbstractCRUDController ccc;
     private IMenuPaintView tela;
     private FigGeometricaDao dao;
-  //  private QuadradoController qc;
-    private TextoController txx;
-    private PontoController ptt;
-    private CirculoController ccc;
-    private RetaController rtt;
-    private LosanguloController losa;
     MenuPrincipal m1 = new MenuPrincipal();
     MenuEnuns opcao = MenuEnuns.LISTAR;
-    private TrapezioController trap;
-
     Paint_Janela p11 = new Paint_Janela();
     MenuDesenhos d1 = new MenuDesenhos();
     private FigGeometrica[] vetor;
-    private Texto[] vet;
-
     public principal() {
         trap = new TrapezioController(dao);
         losa = new LosanguloController(dao);
-
         ptt = new PontoController(dao);
         vetor = new FigGeometrica[10];
         dao = new FigGeometricaDao(10);
-      //  qc = new QuadradoController(dao);
-        quadController =new QuadradoController(dao) ;
-        trian= new TrianguloController(dao);
-
-
+        quadController = new QuadradoController(dao);
+        trian = new TrianguloController(dao);
         rect = new RetanguloController(dao);
         txx = new TextoController(dao);
         ccc = new CirculoController(dao);
         rtt = new RetaController(dao);
     }
-
 
 
     public void Exe() {
@@ -69,28 +59,28 @@ public class principal {
                     m1.soutln("apagada com sucesso ");
                     break;
                 case QUADRADO:
-                    quadController.start();
+                    quadController.start(1);
                     break;
                 case RETANGULO:
-                    rect.start();
+                    rect.start(2);
                     break;
                 case CIRCULO:
 
-                    ccc.start();
+                    ccc.start(3);
                     break;
                 case PONTO:
-                    ptt.start();
+                    ptt.start(4);
 
                     break;
                 case TRIANGULO:
-                    trian.start();
+                    trian.start(5);
                     break;
                 case LOSANGULO:
-                    losa.start();
+                    losa.start(8);
                     break;
 
                 case TEXTO:
-                    txx.start();
+                    txx.start(11);
 
 
                     break;
@@ -102,11 +92,11 @@ public class principal {
                     break;
 
                 case RETA:
-                    rtt.start();
+                    rtt.start(14);
                     break;
                 case LISTAR:
 
-                    dao.Listar();
+                    dao.Listar(0);
                     //d.getItens();
 
 
@@ -137,13 +127,12 @@ public class principal {
                 case SAIR:
                     break;
                 case TRAPEZIO:
-                    trap.start();
+                    trap.start(10);
                     break;
                 default:
             }
         } while (opcao != MenuEnuns.SAIR);
     }
-
 
 
 }

@@ -4,7 +4,7 @@ import paint_AndrewOficial.View.enums.MenuEnuns;
 
 public interface iCrudController<T> {
 
-    public MenuEnuns start();
+    public MenuEnuns start(int i);
 
     public T create();
     public void read(T conta);

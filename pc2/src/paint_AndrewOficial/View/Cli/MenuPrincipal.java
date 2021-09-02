@@ -1,4 +1,4 @@
-package paint_AndrewOficial.View;
+package paint_AndrewOficial.View.Cli;
 
 import paint_AndrewOficial.View.enums.MenuEnuns;
 
@@ -34,6 +34,7 @@ public class MenuPrincipal {
                 "3 -  Circulo\n"+
                 "4 -  Ponto\n"+
                 "5 -  Triangulo\n"+
+                "14 -   Reta\n"+
                 "10 - trapezio\n"+
                 "8 -  losangulo\n"+
                 "11- texto\n"+

@@ -1,5 +1,5 @@
 package paint_AndrewOficial.modelo;
-import paint_AndrewOficial.View.MenuPrincipal;
+import paint_AndrewOficial.View.Cli.MenuPrincipal;
 public class Triangulo extends FigGeometrica{
     protected int lado1,lado2,lado3;
     protected  float area,perimentro;

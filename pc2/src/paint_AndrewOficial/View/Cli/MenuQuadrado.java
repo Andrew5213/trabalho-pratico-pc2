@@ -1,8 +1,8 @@
-package paint_AndrewOficial.View;
+package paint_AndrewOficial.View.Cli;
 
 import paint_AndrewOficial.modelo.Quadrado1;
 
-public class MenuQuadrado extends MenuPrincipal{
+public class MenuQuadrado extends MenuPrincipal {
     protected int opcao,a ;
 
     public int getA() {

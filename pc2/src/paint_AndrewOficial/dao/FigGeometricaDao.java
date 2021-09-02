@@ -1,7 +1,7 @@
 package paint_AndrewOficial.dao;
 
-import paint_AndrewOficial.View.MenuPrincipal;
-import paint_AndrewOficial.modelo.FigGeometrica;
+import paint_AndrewOficial.View.Cli.MenuPrincipal;
+import paint_AndrewOficial.modelo.*;
 
 import java.io.*;
 public class FigGeometricaDao {
@@ -14,11 +14,81 @@ public class FigGeometricaDao {
     public FigGeometricaDao(int tamanho){
         ds= new FigGeometrica[tamanho];
     }
-    public void Listar(){
-        for (int i=0;i< ds.length;i++){
-            if(ds[i]!=null) {
-                // m1.soutln(vetor[i].toString());
-                System.out.println((i+1) + " - " + ds[i].toString());
+    public void Listar(int h){
+
+        if(h == 0) {
+            for (int i = 0; i < ds.length; i++) {
+                if (ds[i] != null) {
+                    // m1.soutln(vetor[i].toString());
+                    System.out.println((i + 1) + " - " + ds[i].toString());
+                }
+            }
+        }else{
+            if(h == 1){
+                for (int i = 0; i < ds.length; i++) {
+                    if (ds[i] != null && ds[i] instanceof Quadrado1) {
+                        // m1.soutln(vetor[i].toString());
+                        System.out.println((i + 1) + " - " + ds[i].toString());
+                    }
+                }
+            }else if(h==2){
+                for (int i = 0; i < ds.length; i++) {
+                    if (ds[i] != null && ds[i] instanceof Retangulo) {
+                        // m1.soutln(vetor[i].toString());
+                        System.out.println((i + 1) + " - " + ds[i].toString());
+                    }
+                }
+            }else if(h==3){
+                for (int i = 0; i < ds.length; i++) {
+                    if (ds[i] != null && ds[i] instanceof Circulo) {
+                        // m1.soutln(vetor[i].toString());
+                        System.out.println((i + 1) + " - " + ds[i].toString());
+                    }
+                }
+
+            }else if(h==4){
+                for (int i = 0; i < ds.length; i++) {
+                    if (ds[i] != null && ds[i] instanceof Ponto) {
+                        // m1.soutln(vetor[i].toString());
+                        System.out.println((i + 1) + " - " + ds[i].toString());
+                    }
+                }
+            }else if(h==5){
+                for (int i = 0; i < ds.length; i++) {
+                    if (ds[i] != null && ds[i] instanceof Triangulo) {
+                        // m1.soutln(vetor[i].toString());
+                        System.out.println((i + 1) + " - " + ds[i].toString());
+                    }
+                }
+            }else if(h==14){
+                for (int i = 0; i < ds.length; i++) {
+                    if (ds[i] != null && ds[i] instanceof Reta) {
+                        // m1.soutln(vetor[i].toString());
+                        System.out.println((i + 1) + " - " + ds[i].toString());
+                    }
+                }
+            }else if(h==10){
+                for (int i = 0; i < ds.length; i++) {
+                    if (ds[i] != null && ds[i] instanceof Trapezio) {
+                        // m1.soutln(vetor[i].toString());
+                        System.out.println((i + 1) + " - " + ds[i].toString());
+                    }
+                }
+
+            }else if(h==8){
+                for (int i = 0; i < ds.length; i++) {
+                    if (ds[i] != null && ds[i] instanceof Losangulo) {
+                        // m1.soutln(vetor[i].toString());
+                        System.out.println((i + 1) + " - " + ds[i].toString());
+                    }
+                }
+            }else if(h==11){
+                for (int i = 0; i < ds.length; i++) {
+                    if (ds[i] != null && ds[i] instanceof Texto) {
+                        // m1.soutln(vetor[i].toString());
+                        System.out.println((i + 1) + " - " + ds[i].toString());
+                    }
+                }
             }
         }
     }

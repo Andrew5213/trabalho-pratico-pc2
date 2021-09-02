@@ -1,10 +1,10 @@
-package paint_AndrewOficial.View;
+package paint_AndrewOficial.View.Cli;
 
-import paint_AndrewOficial.View.gui.AbstractCRUDCli;
+import paint_AndrewOficial.View.gui.ICRUDFiguraView;
 import paint_AndrewOficial.modelo.Texto;
 
 public class TextoCli extends AbstractCRUDCli<Texto>
-            implements ICRUDFiguraView<Texto>  {
+            implements ICRUDFiguraView<Texto> {
 
 
 

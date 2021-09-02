@@ -1,16 +1,16 @@
 package paint_AndrewOficial.controlador;
 
-import paint_AndrewOficial.View.ICRUDFiguraView;
+import paint_AndrewOficial.View.Cli.MenuPrincipal;
+import paint_AndrewOficial.View.Cli.MenuQuadrado;
+import paint_AndrewOficial.View.gui.ICRUDFiguraView;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.dao.FigGeometricaDao;
 import paint_AndrewOficial.modelo.FigGeometrica;
 import paint_AndrewOficial.modelo.Quadrado1;
-import paint_AndrewOficial.modelo.Retangulo;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
-//import paint_AndrewOficial.View.MenuPrincipal;
+//import paint_AndrewOficial.View.Cli.MenuPrincipal;
 
 public abstract class AbstractCRUDController<T> implements  iCrudController<T>{
     protected ICRUDFiguraView<T> tela;
@@ -21,7 +21,7 @@ public abstract class AbstractCRUDController<T> implements  iCrudController<T>{
     public AbstractCRUDController(FigGeometricaDao dao) {
         this.dao = dao;
     }
-    public MenuEnuns start() {
+    public MenuEnuns start(int i) {
         in = new Scanner(System.in);
         MenuEnuns opcao;
         do {
@@ -38,35 +38,33 @@ public abstract class AbstractCRUDController<T> implements  iCrudController<T>{
                 case EDITAR:
                     //  tela.showMessage("digite o novo valor do quadrado ");
 
-                    dao.Listar();
+                    dao.Listar(i);
                     System.out.println("Escolha uma posicao: ");
                     int pos = in.nextInt();
                     T newquad = tela.create();
                     dao.editar(pos-1, (FigGeometrica) newquad);
                     break;
                 case LISTAR:
-
-                    ArrayList<Quadrado1> lista = new ArrayList<Quadrado1>();
-                    for (FigGeometrica fig: dao.getItens()){
-                        if( fig instanceof Quadrado1){
-                            lista.add((Quadrado1) fig);
-                        }
-                    }
-                    tela.list((T[]) lista.toArray());
-                    ArrayList<Retangulo> lista1 = new ArrayList<Retangulo>();
-                    for (FigGeometrica fig: dao.getItens()){
-                        if( fig instanceof Retangulo){
-                            lista1.add((Retangulo) fig);
-                        }
-                    }
-                    tela.list((T[]) lista1.toArray());
-
-
-                  //  dao.Listar();
+                    dao.Listar(i);
 
 
                     break;
                 case APAGAR:
+                    MenuPrincipal m1 = new MenuPrincipal();
+                    m1.soutln("digite o id  e a figura q sera apagada ");
+                    MenuQuadrado q = new MenuQuadrado();
+                    q.receber();
+                    System.out.println(dao.ds[q.getA()]);
+                    m1.soutln("quer apagar? se sim digite 1 \n "+
+                            "se não digite 2");
+                    q.receber();
+                    if(q.getA()==1){
+                        dao.ds[q.getA()] = null;
+                        m1.soutln("apagada com sucesso ");
+                    }else {
+                        m1.soutln("nao apagada ");
+                    }
+
 
                     break;
 
@@ -107,5 +105,4 @@ public abstract class AbstractCRUDController<T> implements  iCrudController<T>{
     public void list(T[] listas) {
 
     }
-
 }

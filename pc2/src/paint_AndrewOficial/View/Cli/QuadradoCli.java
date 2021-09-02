@@ -1,6 +1,6 @@
-package paint_AndrewOficial.View;
+package paint_AndrewOficial.View.Cli;
 
-import paint_AndrewOficial.View.gui.AbstractCRUDCli;
+import paint_AndrewOficial.View.gui.ICRUDFiguraView;
 import paint_AndrewOficial.modelo.Quadrado1;
 
 public class QuadradoCli extends AbstractCRUDCli<Quadrado1>

@@ -1,11 +1,11 @@
-package paint_AndrewOficial.View;
+package paint_AndrewOficial.View.Cli;
 
 
-import paint_AndrewOficial.View.gui.AbstractCRUDCli;
+import paint_AndrewOficial.View.gui.ICRUDFiguraView;
 import paint_AndrewOficial.modelo.Retangulo;
 
 public class RetanguloCli extends AbstractCRUDCli<Retangulo>
-            implements ICRUDFiguraView<Retangulo>  {
+            implements ICRUDFiguraView<Retangulo> {
 
 
 
