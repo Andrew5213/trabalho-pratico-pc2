@@ -15,10 +15,10 @@ public class principal {
     //private FiguraGeometricaDAO dao;
     private AbstractCRUDController quadController;
     private AbstractCRUDController trian;
+    private  AbstractCRUDController rect;
     private IMenuPaintView tela;
     private FigGeometricaDao dao;
   //  private QuadradoController qc;
-    private RetanguloController rect;
     private TextoController txx;
     private PontoController ptt;
     private CirculoController ccc;

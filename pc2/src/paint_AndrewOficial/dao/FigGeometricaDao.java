@@ -17,9 +17,14 @@ public class FigGeometricaDao {
     public void Listar(){
         for (int i=0;i< ds.length;i++){
             if(ds[i]!=null) {
-               // m1.soutln(vetor[i].toString());
-                System.out.println(ds[i].toString());
+                // m1.soutln(vetor[i].toString());
+                System.out.println((i+1) + " - " + ds[i].toString());
             }
+        }
+    }
+    public void editar(int pos, FigGeometrica fig){
+        if(ds!=null && pos>=0) {
+            ds[pos] = fig;
         }
     }
     public boolean create(FigGeometrica fig){
@@ -29,8 +34,9 @@ public class FigGeometricaDao {
                 ds[i] = fig;
                 return true;
             }
-            }
-            m1.soutln("o vetor esta cheio");
+
+        }
+        m1.soutln("vetor esta cheio ");// excessao
         return false;
     }
     public FigGeometrica read(int codig){

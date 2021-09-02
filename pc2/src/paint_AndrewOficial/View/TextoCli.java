@@ -3,7 +3,7 @@ package paint_AndrewOficial.View;
 import paint_AndrewOficial.View.gui.AbstractCRUDCli;
 import paint_AndrewOficial.modelo.Texto;
 
-public class MenuTexto  extends AbstractCRUDCli<Texto>
+public class TextoCli extends AbstractCRUDCli<Texto>
             implements ICRUDFiguraView<Texto>  {
 
 

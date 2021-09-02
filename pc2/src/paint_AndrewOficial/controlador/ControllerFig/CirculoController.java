@@ -1,7 +1,7 @@
 package paint_AndrewOficial.controlador.ControllerFig;
 
 import paint_AndrewOficial.View.MenuCirculo;
-import paint_AndrewOficial.View.MenuPonto;
+import paint_AndrewOficial.View.PontoCli;
 import paint_AndrewOficial.View.MenuPrincipal;
 import paint_AndrewOficial.View.MenuQuadrado;
 import paint_AndrewOficial.View.enums.MenuEnuns;
@@ -15,7 +15,7 @@ public class CirculoController implements Icirculo {
     private FigGeometricaDao dao;
 
     public CirculoController(FigGeometricaDao dao) {
-        MenuPonto tela = new MenuPonto();
+        PontoCli tela = new PontoCli();
         this.dao = dao;
     }
 

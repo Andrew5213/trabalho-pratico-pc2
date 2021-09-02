@@ -3,7 +3,7 @@ package paint_AndrewOficial.View;
 import paint_AndrewOficial.View.gui.AbstractCRUDCli;
 import paint_AndrewOficial.modelo.Triangulo;
 
-public class MenuTriangulo  extends AbstractCRUDCli<Triangulo>
+public class TrianguloCli extends AbstractCRUDCli<Triangulo>
             implements ICRUDFiguraView<Triangulo>{
 
 
