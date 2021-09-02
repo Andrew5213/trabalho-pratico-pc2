@@ -1,7 +1,6 @@
 package paint_AndrewOficial.controlador;
 
 import paint_AndrewOficial.View.ICRUDFiguraView;
-import paint_AndrewOficial.View.MenuQuadrado;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.dao.FigGeometricaDao;
 import paint_AndrewOficial.modelo.FigGeometrica;
@@ -49,11 +48,8 @@ public abstract class AbstractCRUDController<T> implements  iCrudController<T>{
 
 
                     break;
-                case MOSTRAR:
-                    tela.showMessage("digite a id que sera mostrado");
-                    MenuQuadrado q = new MenuQuadrado();
-                    q.receber();
-                    tela.showMessage(dao.ds[q.getA()].toString());
+                case APAGAR:
+
                     break;
 
 

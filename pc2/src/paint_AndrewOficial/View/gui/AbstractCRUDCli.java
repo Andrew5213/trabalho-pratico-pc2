@@ -12,7 +12,6 @@ public  abstract class AbstractCRUDCli<T> extends MenuPrincipal
         System.out.println("Digite uma opção \n" +
                 "1 - Criar\n" +
                 "2 - Editar\n" +
-                "5 - Mostrar\n"+
                 "6 - Apagar\n" +
                 "7 - Listar\n" +
                 "0 - Sair");
