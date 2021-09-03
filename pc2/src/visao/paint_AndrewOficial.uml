@@ -12,8 +12,8 @@
   <edges>
     <edge source="paint_AndrewOficial.dao" target="paint_AndrewOficial.View" relationship="CREATE">
       <point x="-15.125" y="-15.5" />
-      <point x="149.3566176470588" y="177.0" />
-      <point x="70.1875" y="177.0" />
+      <point x="149.3566176470588" y="167.0" />
+      <point x="70.1875" y="167.0" />
       <point x="70.1875" y="63.0" />
       <point x="142.4375" y="63.0" />
       <point x="-15.875" y="15.5" />
@@ -132,9 +132,11 @@
       <point x="-15.875" y="15.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="521.5" y="344.0" />
+  <settings layout="Hierarchic" zoom="1.15" showDependencies="true" x="86.5" y="129.5" />
   <SelectedNodes />
-  <Categories />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>public</VISIBILITY>
 </Diagram>

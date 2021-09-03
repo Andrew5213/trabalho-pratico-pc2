@@ -1,7 +1,7 @@
 package paint_AndrewOficial.View.Cli;
 
 public class MenuDesenhos extends MenuPrincipal {
- protected  int i;
+    protected int i;
 
     public int getI() {
         return i;
@@ -11,7 +11,7 @@ public class MenuDesenhos extends MenuPrincipal {
         this.i = i;
     }
 
-    public int Escolha (){
+    public int Escolha() {
         System.out.println("digite o numero correspondente ao desenho");
         System.out.println("1-quadrado");
         System.out.println("2-retangulo");
@@ -19,7 +19,7 @@ public class MenuDesenhos extends MenuPrincipal {
         System.out.println("4-circulos");
         System.out.println("5-reta");
         System.out.println("6-losangulo");
-        int x= in.nextInt();
+        int x = in.nextInt();
         this.setI(x);
         return this.getI();
     }

@@ -1,7 +1,7 @@
 package paint_AndrewOficial.modelo;
 
-public class Ponto extends FigGeometrica{
-    private int  x1,y1;
+public class Ponto extends FigGeometrica {
+    private int x1, y1;
 
     public Ponto(int x1, int y1) {
         this.x1 = x1;

@@ -1,17 +1,20 @@
 package paint_AndrewOficial.modelo;
+
 import paint_AndrewOficial.View.Cli.MenuPrincipal;
-public class Triangulo extends FigGeometrica{
-    protected int lado1,lado2,lado3;
-    protected  float area,perimentro;
-MenuPrincipal m1 = new MenuPrincipal();
+
+public class Triangulo extends FigGeometrica {
+    protected int lado1, lado2, lado3;
+    protected float area, perimentro;
+    MenuPrincipal m1 = new MenuPrincipal();
+
     public Triangulo(int lado1, int lado2, int lado3) {
         //para criar triangulo qualquer um dos lados tem q ser menor q a soma dos outros dois lados
-        if(lado1<lado2+lado3 || lado2<lado1+lado3 || lado3<lado1+lado2) {
+        if (lado1 < lado2 + lado3 || lado2 < lado1 + lado3 || lado3 < lado1 + lado2) {
             // desta forma criamos um triangulo respeitando sua lei
             this.lado1 = lado1;
             this.lado2 = lado2;
             this.lado3 = lado3;
-        } else{
+        } else {
             m1.soutln("este triangulo nao pode ser criado pois nao atende as regras de criacao ");
         }
     }
@@ -46,9 +49,8 @@ MenuPrincipal m1 = new MenuPrincipal();
     }
 
 
-
     public float getPerimentro() {
-        return perimentro=getLado1()+getLado2()+getLado3();
+        return perimentro = getLado1() + getLado2() + getLado3();
     }
 
     @Override

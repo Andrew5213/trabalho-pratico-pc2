@@ -1,14 +1,15 @@
 package paint_AndrewOficial.modelo;
 
-public class Circulo extends FigGeometrica{
-    int raio,diametro;
+public class Circulo extends FigGeometrica {
+    int raio, diametro;
     float area;
+    private final float raio1 = (float) (2 * raio * 3.14);
 
     public Circulo(int raio) {
         this.raio = raio;
     }
 
-    public int  getRaio() {
+    public int getRaio() {
         return raio;
     }
 
@@ -20,12 +21,12 @@ public class Circulo extends FigGeometrica{
         return diametro;
     }
 
-    public void setDiametro(int  diametro) {
+    public void setDiametro(int diametro) {
         this.diametro = diametro;
     }
-private float raio1= (float) (2*raio*3.14);
+
     public float getArea() {
-        return area= (raio1);
+        return area = (raio1);
     }
 
     @Override

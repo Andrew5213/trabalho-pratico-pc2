@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>paint_AndrewOficial.View</OriginalElement>
+  <nodes>
+    <node x="70.5" y="164.0">paint_AndrewOficial.View.Cli</node>
+    <node x="18.819444444444443" y="0.0">paint_AndrewOficial.View.enums</node>
+    <node x="157.0" y="81.0">paint_AndrewOficial.View.desenhos</node>
+    <node x="0.0" y="81.0">paint_AndrewOficial.View.gui</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="paint_AndrewOficial.View.desenhos" target="paint_AndrewOficial.View.desenhos" relationship="CREATE">
+      <point x="-39.25" y="15.5" />
+      <point x="196.25" y="132.0" />
+      <point x="137.0" y="132.0" />
+      <point x="137.0" y="96.5" />
+      <point x="-78.5" y="-0.0" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli" target="paint_AndrewOficial.View.gui" relationship="REALIZATION">
+      <point x="-37.33333333333334" y="-15.5" />
+      <point x="89.16666666666666" y="143.0" />
+      <point x="58.0" y="143.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli" target="paint_AndrewOficial.View.enums" relationship="DEPENDENCY">
+      <point x="-7.105427357601002E-15" y="-15.5" />
+      <point x="126.5" y="56.0" />
+      <point x="87.81944444444444" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli" target="paint_AndrewOficial.View.desenhos" relationship="CREATE">
+      <point x="37.33333333333334" y="-15.5" />
+      <point x="163.83333333333334" y="143.0" />
+      <point x="274.75" y="143.0" />
+      <point x="39.25" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli" target="paint_AndrewOficial.View.Cli" relationship="DEPENDENCY">
+      <point x="0.0" y="15.5" />
+      <point x="126.5" y="215.0" />
+      <point x="50.5" y="215.0" />
+      <point x="50.5" y="179.5" />
+      <point x="-56.0" y="-0.0" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.gui" target="paint_AndrewOficial.View.enums" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="58.0" y="56.0" />
+      <point x="87.81944444444444" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="78.5" y="132.0" />
+  <SelectedNodes>
+    <node>paint_AndrewOficial.View.Cli</node>
+    <node>paint_AndrewOficial.View.enums</node>
+    <node>paint_AndrewOficial.View.desenhos</node>
+    <node>paint_AndrewOficial.View.gui</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

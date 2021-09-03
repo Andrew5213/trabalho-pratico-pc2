@@ -1,17 +1,19 @@
 package paint_AndrewOficial.modelo;
 
-public class Losangulo extends Quadrilatero1{
+public class Losangulo extends Quadrilatero1 {
 
     protected int lado;// como o losangulo tem todos os lados iguais o usuario ira declarar somente u lado
 
     public Losangulo(int lado) {
         this.lado = lado;
     }
+
     @Override
 
     public float getPerimetro() {
-        return perimetro=lado*4;
+        return perimetro = lado * 4;
     }
+
     @Override
 
 

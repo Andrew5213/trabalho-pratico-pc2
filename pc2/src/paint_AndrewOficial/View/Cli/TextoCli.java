@@ -4,15 +4,14 @@ import paint_AndrewOficial.View.gui.ICRUDFiguraView;
 import paint_AndrewOficial.modelo.Texto;
 
 public class TextoCli extends AbstractCRUDCli<Texto>
-            implements ICRUDFiguraView<Texto> {
-
+        implements ICRUDFiguraView<Texto> {
 
 
     public Texto create() {
 
         System.out.println("digite uma palavra  ");
-        String guambiarra=in.nextLine();
-        String palavra= in.nextLine();
+        String guambiarra = in.nextLine();
+        String palavra = in.nextLine();
         Texto tx = new Texto(palavra);
         return tx;
     }

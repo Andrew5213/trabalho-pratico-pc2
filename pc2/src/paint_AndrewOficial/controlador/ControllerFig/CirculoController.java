@@ -8,7 +8,7 @@ public class CirculoController extends AbstractCRUDController<Circulo> {
 
     public CirculoController(FigGeometricaDao dao) {
         super(dao);
-       // tela = new CirculoCli();
+         //tela = new CirculoCli();
     }
 
     @Override

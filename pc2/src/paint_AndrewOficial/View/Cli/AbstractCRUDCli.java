@@ -3,10 +3,10 @@ package paint_AndrewOficial.View.Cli;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.View.gui.ICRUDFiguraView;
 
-public  abstract class AbstractCRUDCli<T> extends MenuPrincipal
+public abstract class AbstractCRUDCli<T> extends MenuPrincipal
         implements ICRUDFiguraView<T> {
 
-    public MenuEnuns menuPrincipal(){
+    public MenuEnuns menuPrincipal() {
         //Loop até entregar uma opção válida
         System.out.println("Digite uma opção \n" +
                 "1 - Criar\n" +
@@ -17,7 +17,7 @@ public  abstract class AbstractCRUDCli<T> extends MenuPrincipal
 
         int opcao = in.nextInt();
 
-        switch (opcao){
+        switch (opcao) {
             case 1:
                 return MenuEnuns.CRIAR;
             case 2:
@@ -44,7 +44,7 @@ public  abstract class AbstractCRUDCli<T> extends MenuPrincipal
 
     @Override
     public void list(T[] listas) {
-        for (T quad: listas){
+        for (T quad : listas) {
             System.out.println(quad);
         }
     }

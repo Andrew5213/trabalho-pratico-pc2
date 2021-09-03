@@ -14,6 +14,7 @@ public class Draw_A_Triangle extends JPanel {
     }
 
 }
+
 class Triangle_Shape extends Path2D.Double {
     public Triangle_Shape(Point2D... points) {
         moveTo(points[0].getX(), points[0].getY());

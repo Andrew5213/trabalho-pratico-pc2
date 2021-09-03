@@ -2,7 +2,6 @@ package paint_AndrewOficial.controlador;
 
 import paint_AndrewOficial.View.Cli.MenuDesenhos;
 import paint_AndrewOficial.View.Cli.MenuPrincipal;
-import paint_AndrewOficial.View.Cli.MenuQuadrado;
 import paint_AndrewOficial.View.Cli.Paint_Janela;
 import paint_AndrewOficial.View.enums.MenuEnuns;
 import paint_AndrewOficial.View.gui.IMenuPaintView;
@@ -11,23 +10,24 @@ import paint_AndrewOficial.dao.FigGeometricaDao;
 import paint_AndrewOficial.modelo.FigGeometrica;
 
 public class principal {
-    //private FiguraGeometricaDAO dao;
-    private AbstractCRUDController quadController;
-    private AbstractCRUDController trian;
-    private AbstractCRUDController rect;
-    private AbstractCRUDController txx;
-    private AbstractCRUDController ptt;
-    private AbstractCRUDController rtt;
-    private AbstractCRUDController trap;
-    private AbstractCRUDController losa;
-    private AbstractCRUDController ccc;
-    private IMenuPaintView tela;
-    private FigGeometricaDao dao;
     MenuPrincipal m1 = new MenuPrincipal();
     MenuEnuns opcao = MenuEnuns.LISTAR;
     Paint_Janela p11 = new Paint_Janela();
     MenuDesenhos d1 = new MenuDesenhos();
-    private FigGeometrica[] vetor;
+    //private FiguraGeometricaDAO dao;
+    private final AbstractCRUDController quadController;
+    private final AbstractCRUDController trian;
+    private final AbstractCRUDController rect;
+    private final AbstractCRUDController txx;
+    private final AbstractCRUDController ptt;
+    private final AbstractCRUDController rtt;
+    private final AbstractCRUDController trap;
+    private final AbstractCRUDController losa;
+    private final AbstractCRUDController ccc;
+    private IMenuPaintView tela;
+    private FigGeometricaDao dao;
+    private final FigGeometrica[] vetor;
+
     public principal() {
         trap = new TrapezioController(dao);
         losa = new LosanguloController(dao);
@@ -52,11 +52,7 @@ public class principal {
             m1.sout("escolhi: " + opcao + "\n\n");
             switch (opcao) {
                 case APAGAR:
-                    m1.soutln("digite qual e a figura q sera apagada ");
-                    MenuQuadrado q = new MenuQuadrado();
-                    q.receber();
-                    dao.ds[q.getA()] = null;
-                    m1.soutln("apagada com sucesso ");
+                  dao.apagar();
                     break;
                 case QUADRADO:
                     quadController.start(1);

@@ -1,7 +1,12 @@
 package paint_AndrewOficial.modelo;
 
-public class Quadrado1 extends Quadrilatero1{
+public class Quadrado1 extends Quadrilatero1 {
     protected int lado;
+
+    public Quadrado1(int lado) {
+
+        this.setLado(lado);
+    }
 
     public int getLado() {
         return lado;
@@ -11,18 +16,14 @@ public class Quadrado1 extends Quadrilatero1{
         this.lado = lado;
     }
 
-    public Quadrado1(int lado) {
-
-        this.setLado(lado);
-    }
-
     @Override
     public float getPerimetro() {
-        return perimetro=lado*4;
+        return perimetro = lado * 4;
     }
+
     @Override
     public float getArea() {
-        return area=lado*lado;
+        return area = lado * lado;
     }
 
     @Override

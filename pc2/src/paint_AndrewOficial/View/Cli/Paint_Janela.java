@@ -10,23 +10,25 @@ public class Paint_Janela {
         JFrame janela = new JFrame("Meu primeiro frame em Java");
         Painel meuPainel = new Painel();
 
-        janela.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.add(meuPainel);
-        janela.setSize(600,400);
+        janela.setSize(600, 400);
         janela.setVisible(true);
 
 
     }
-    public void PintarQuadrado(){
+
+    public void PintarQuadrado() {
         JFrame janela = new JFrame("Quadrado");
         PainelQuadrado meuPainel = new PainelQuadrado();
 
-        janela.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.add(meuPainel);
-        janela.setSize(600,400);
+        janela.setSize(600, 400);
         janela.setVisible(true);
     }
-    public void PintarTriangulo(){
+
+    public void PintarTriangulo() {
         JFrame.setDefaultLookAndFeelDecorated(true);
         JFrame frame = new JFrame("Triangulo");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,25 +39,28 @@ public class Paint_Janela {
         frame.add(panel);
         frame.setVisible(true);
     }
-    public void PintarCirculo(){
+
+    public void PintarCirculo() {
         JFrame janela = new JFrame("Quadrado");
         Circulo meuPainel = new Circulo();
 
-        janela.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.add(meuPainel);
-        janela.setSize(600,400);
+        janela.setSize(600, 400);
         janela.setVisible(true);
     }
-    public void PintarReta(){
+
+    public void PintarReta() {
         JFrame janela = new JFrame("Quadrado");
         PainelReta meuPainel = new PainelReta();
 
-        janela.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.add(meuPainel);
-        janela.setSize(600,400);
+        janela.setSize(600, 400);
         janela.setVisible(true);
     }
-    public void PintarLosangulo(){
+
+    public void PintarLosangulo() {
         System.out.println("losangulo ");
 
     }

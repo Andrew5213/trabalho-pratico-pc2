@@ -2,13 +2,12 @@ package paint_AndrewOficial.modelo;
 
 public class Retangulo extends Quadrilatero1 {
 
-            int lateral,altura; ;
+    int lateral, altura;
 
     public Retangulo(int lateral, int altura) {
         this.setLateral(lateral);
         this.setAltura(altura);
     }
-
 
 
     public int getLateral() {
@@ -26,15 +25,17 @@ public class Retangulo extends Quadrilatero1 {
     public void setAltura(int altura) {
         this.altura = altura;
     }
-   @Override
-   public float getPerimetro() {
-       return perimetro=(altura*2)+(lateral*2);
-   }
-  @Override
 
-  public float getArea() {
-      return area=lateral*altura;
-  }
+    @Override
+    public float getPerimetro() {
+        return perimetro = (altura * 2) + (lateral * 2);
+    }
+
+    @Override
+
+    public float getArea() {
+        return area = lateral * altura;
+    }
 
     @Override
     public String toString() {

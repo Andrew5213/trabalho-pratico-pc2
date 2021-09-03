@@ -1,8 +1,9 @@
 package paint_AndrewOficial.modelo;
 
-public class Trapezio extends FigGeometrica{
-    protected int basemaior, basemenor,lado1,lado2;
-    protected  float area,perimetro;
+public class Trapezio extends FigGeometrica {
+    protected int basemaior, basemenor, lado1, lado2;
+    protected float area, perimetro;
+
     public Trapezio(int basemaior, int basemenor, int lado1, int lado2) {
         this.basemaior = basemaior;
         this.basemenor = basemenor;
@@ -55,7 +56,7 @@ public class Trapezio extends FigGeometrica{
     }
 
     public float getPerimetro() {
-        return perimetro=basemenor+basemaior+lado1+lado2;
+        return perimetro = basemenor + basemaior + lado1 + lado2;
     }
 
 }

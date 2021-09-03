@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>paint_AndrewOficial.controlador.ControllerFig</OriginalElement>
+  <nodes>
+    <node x="202.0" y="228.0">paint_AndrewOficial.controlador.ControllerFig.TextoController</node>
+    <node x="0.0" y="76.0">paint_AndrewOficial.controlador.ControllerFig.QuadradoController</node>
+    <node x="0.0" y="304.0">paint_AndrewOficial.controlador.ControllerFig.RetaController</node>
+    <node x="230.0" y="76.0">paint_AndrewOficial.controlador.ControllerFig.TrianguloController</node>
+    <node x="0.0" y="0.0">paint_AndrewOficial.controlador.ControllerFig.LosanguloController</node>
+    <node x="0.0" y="152.0">paint_AndrewOficial.controlador.ControllerFig.TrapezioController</node>
+    <node x="221.0" y="152.0">paint_AndrewOficial.controlador.ControllerFig.CirculoController</node>
+    <node x="231.0" y="0.0">paint_AndrewOficial.controlador.ControllerFig.RetanguloController</node>
+    <node x="0.0" y="228.0">paint_AndrewOficial.controlador.ControllerFig.PontoController</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="208.5" y="167.5" />
+  <SelectedNodes>
+    <node>paint_AndrewOficial.controlador.ControllerFig.TextoController</node>
+    <node>paint_AndrewOficial.controlador.ControllerFig.QuadradoController</node>
+    <node>paint_AndrewOficial.controlador.ControllerFig.RetaController</node>
+    <node>paint_AndrewOficial.controlador.ControllerFig.TrianguloController</node>
+    <node>paint_AndrewOficial.controlador.ControllerFig.LosanguloController</node>
+    <node>paint_AndrewOficial.controlador.ControllerFig.TrapezioController</node>
+    <node>paint_AndrewOficial.controlador.ControllerFig.CirculoController</node>
+    <node>paint_AndrewOficial.controlador.ControllerFig.RetanguloController</node>
+    <node>paint_AndrewOficial.controlador.ControllerFig.PontoController</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

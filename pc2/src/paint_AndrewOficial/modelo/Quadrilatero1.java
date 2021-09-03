@@ -1,19 +1,17 @@
 package paint_AndrewOficial.modelo;
 
-public class Quadrilatero1  extends FigGeometrica{
-protected int lateralsuperior,lateralinferior,lateralesquerda,lateraldireita;
-protected float perimetro , area ;
+public class Quadrilatero1 extends FigGeometrica {
+    protected int lateralsuperior, lateralinferior, lateralesquerda, lateraldireita;
+    protected float perimetro, area;
 
     public float getPerimetro() {
-        return perimetro=lateraldireita+lateralesquerda+lateralinferior+lateralsuperior;
+        return perimetro = lateraldireita + lateralesquerda + lateralinferior + lateralsuperior;
     }
-
 
 
     public float getArea() {
-        return area=lateraldireita*lateralsuperior;
+        return area = lateraldireita * lateralsuperior;
     }
-
 
 
     public int getLateralsuperior() {
@@ -48,8 +46,6 @@ protected float perimetro , area ;
         this.lateraldireita = lateraldireita;
     }
     //agora vamos fazer a area do perimetro
-
-
 
 
 }

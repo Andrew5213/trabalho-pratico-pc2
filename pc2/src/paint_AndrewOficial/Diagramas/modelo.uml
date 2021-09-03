@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>paint_AndrewOficial.modelo</OriginalElement>
+  <nodes>
+    <node x="434.0" y="81.0">paint_AndrewOficial.modelo.Ponto</node>
+    <node x="511.5" y="0.0">paint_AndrewOficial.modelo.FigGeometrica</node>
+    <node x="299.0" y="81.0">paint_AndrewOficial.modelo.Triangulo</node>
+    <node x="756.0" y="81.0">paint_AndrewOficial.modelo.Circulo</node>
+    <node x="135.0" y="81.0">paint_AndrewOficial.modelo.Quadrilatero1</node>
+    <node x="0.0" y="162.0">paint_AndrewOficial.modelo.Quadrado1</node>
+    <node x="147.0" y="162.0">paint_AndrewOficial.modelo.Retangulo</node>
+    <node x="287.0" y="162.0">paint_AndrewOficial.modelo.Losangulo</node>
+    <node x="874.0" y="81.0">paint_AndrewOficial.modelo.Trapezio</node>
+    <node x="545.0" y="81.0">paint_AndrewOficial.modelo.Reta</node>
+    <node x="647.0" y="81.0">paint_AndrewOficial.modelo.Texto</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="paint_AndrewOficial.modelo.Retangulo" target="paint_AndrewOficial.modelo.Quadrilatero1" relationship="GENERALIZATION">
+      <point x="2.8421709430404007E-14" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.modelo.Ponto" target="paint_AndrewOficial.modelo.FigGeometrica" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="479.5" y="56.0" />
+      <point x="586.0" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.modelo.Losangulo" target="paint_AndrewOficial.modelo.Quadrilatero1" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="347.0" y="137.0" />
+      <point x="207.0" y="137.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.modelo.Texto" target="paint_AndrewOficial.modelo.FigGeometrica" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="691.5" y="56.0" />
+      <point x="586.0" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.modelo.Quadrado1" target="paint_AndrewOficial.modelo.Quadrilatero1" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="63.5" y="137.0" />
+      <point x="207.0" y="137.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.modelo.Reta" target="paint_AndrewOficial.modelo.FigGeometrica" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.modelo.Trapezio" target="paint_AndrewOficial.modelo.FigGeometrica" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="929.0" y="56.0" />
+      <point x="586.0" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.modelo.Triangulo" target="paint_AndrewOficial.modelo.FigGeometrica" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="356.5" y="56.0" />
+      <point x="586.0" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.modelo.Circulo" target="paint_AndrewOficial.modelo.FigGeometrica" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="805.0" y="56.0" />
+      <point x="586.0" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.modelo.Quadrilatero1" target="paint_AndrewOficial.modelo.FigGeometrica" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="207.0" y="56.0" />
+      <point x="586.0" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9382470119521913" showDependencies="false" x="491.99999999999994" y="96.5" />
+  <SelectedNodes>
+    <node>paint_AndrewOficial.modelo.Quadrado1</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

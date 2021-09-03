@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>paint_AndrewOficial.View.gui</OriginalElement>
+  <nodes>
+    <node x="0.0" y="157.0">paint_AndrewOficial.View.gui.IMenuPrincipalView</node>
+    <node x="0.0" y="81.0">paint_AndrewOficial.View.gui.ICRUDFiguraView</node>
+    <node x="37.0" y="0.0">paint_AndrewOficial.View.gui.IBasicView</node>
+    <node x="203.0" y="233.0">paint_AndrewOficial.View.gui.IRetanguloView</node>
+    <node x="0.0" y="233.0">paint_AndrewOficial.View.gui.IMenuPaintView</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="paint_AndrewOficial.View.gui.ICRUDFiguraView" target="paint_AndrewOficial.View.gui.IBasicView" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="179.5" y="132.0" />
+  <SelectedNodes>
+    <node>paint_AndrewOficial.View.gui.IMenuPrincipalView</node>
+    <node>paint_AndrewOficial.View.gui.ICRUDFiguraView</node>
+    <node>paint_AndrewOficial.View.gui.IBasicView</node>
+    <node>paint_AndrewOficial.View.gui.IRetanguloView</node>
+    <node>paint_AndrewOficial.View.gui.IMenuPaintView</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

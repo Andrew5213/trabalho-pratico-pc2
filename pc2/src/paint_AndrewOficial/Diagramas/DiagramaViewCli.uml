@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>paint_AndrewOficial.View.Cli</OriginalElement>
+  <nodes>
+    <node x="0.0" y="250.0">paint_AndrewOficial.View.Cli.Paint_Janela</node>
+    <node x="0.0" y="174.0">paint_AndrewOficial.View.Cli.TextoCli</node>
+    <node x="817.0" y="174.0">paint_AndrewOficial.View.Cli.TrapezioCli</node>
+    <node x="1620.25" y="81.0">paint_AndrewOficial.View.Cli.MenuDesenhos</node>
+    <node x="1444.25" y="81.0">paint_AndrewOficial.View.Cli.MenuQuadrado</node>
+    <node x="665.0" y="174.0">paint_AndrewOficial.View.Cli.TrianguloCli</node>
+    <node x="537.0" y="174.0">paint_AndrewOficial.View.Cli.PontoCli</node>
+    <node x="126.0" y="174.0">paint_AndrewOficial.View.Cli.RetanguloCli</node>
+    <node x="970.125" y="0.0">paint_AndrewOficial.View.Cli.MenuPrincipal</node>
+    <node x="418.0" y="174.0">paint_AndrewOficial.View.Cli.RetaCli</node>
+    <node x="1120.0" y="174.0">paint_AndrewOficial.View.Cli.LosanguloCli</node>
+    <node x="1233.25" y="81.0">paint_AndrewOficial.View.Cli.AbstractCRUDCli</node>
+    <node x="964.0" y="174.0">paint_AndrewOficial.View.Cli.QuadradoCli</node>
+    <node x="283.0" y="174.0">paint_AndrewOficial.View.Cli.CirculoCli</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="paint_AndrewOficial.View.Cli.AbstractCRUDCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="1328.75" y="61.0" />
+      <point x="1522.25" y="61.0" />
+      <point x="1522.25" y="51.0" />
+      <point x="1079.625" y="51.0" />
+      <point x="36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.LosanguloCli" target="paint_AndrewOficial.View.Cli.AbstractCRUDCli" relationship="GENERALIZATION">
+      <point x="-34.25" y="-15.5" />
+      <point x="1154.25" y="153.0" />
+      <point x="596.25" y="153.0" />
+      <point x="596.25" y="133.0" />
+      <point x="1328.75" y="133.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.RetaCli" target="paint_AndrewOficial.View.Cli.AbstractCRUDCli" relationship="GENERALIZATION">
+      <point x="24.75" y="-15.5" />
+      <point x="492.25" y="153.0" />
+      <point x="596.25" y="153.0" />
+      <point x="596.25" y="133.0" />
+      <point x="1328.75" y="133.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.MenuQuadrado" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="1522.25" y="51.0" />
+      <point x="1079.625" y="51.0" />
+      <point x="36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.RetaCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="DEPENDENCY">
+      <point x="-24.75" y="-15.5" />
+      <point x="442.75" y="61.0" />
+      <point x="585.75" y="61.0" />
+      <point x="585.75" y="51.0" />
+      <point x="1006.625" y="51.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.LosanguloCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="DEPENDENCY">
+      <point x="34.25" y="-15.5" />
+      <point x="1222.75" y="61.0" />
+      <point x="585.75" y="61.0" />
+      <point x="585.75" y="51.0" />
+      <point x="1006.625" y="51.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.TextoCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="DEPENDENCY">
+      <point x="-26.5" y="-15.5" />
+      <point x="26.5" y="61.0" />
+      <point x="585.75" y="61.0" />
+      <point x="585.75" y="51.0" />
+      <point x="1006.625" y="51.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.QuadradoCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="DEPENDENCY">
+      <point x="34.0" y="-15.5" />
+      <point x="1066.0" y="61.0" />
+      <point x="585.75" y="61.0" />
+      <point x="585.75" y="51.0" />
+      <point x="1006.625" y="51.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.TrapezioCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="DEPENDENCY">
+      <point x="31.75" y="-15.5" />
+      <point x="912.25" y="61.0" />
+      <point x="585.75" y="61.0" />
+      <point x="585.75" y="51.0" />
+      <point x="1006.625" y="51.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.RetanguloCli" target="paint_AndrewOficial.View.Cli.AbstractCRUDCli" relationship="GENERALIZATION">
+      <point x="34.25" y="-15.5" />
+      <point x="228.75" y="153.0" />
+      <point x="596.25" y="153.0" />
+      <point x="596.25" y="133.0" />
+      <point x="1328.75" y="133.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.CirculoCli" target="paint_AndrewOficial.View.Cli.AbstractCRUDCli" relationship="GENERALIZATION">
+      <point x="28.75" y="-15.5" />
+      <point x="369.25" y="153.0" />
+      <point x="596.25" y="153.0" />
+      <point x="596.25" y="133.0" />
+      <point x="1328.75" y="133.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.TrianguloCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="DEPENDENCY">
+      <point x="33.0" y="-15.5" />
+      <point x="764.0" y="143.0" />
+      <point x="754.7205882352941" y="143.0" />
+      <point x="754.7205882352941" y="61.0" />
+      <point x="585.75" y="61.0" />
+      <point x="585.75" y="51.0" />
+      <point x="1006.625" y="51.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.RetanguloCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="DEPENDENCY">
+      <point x="-34.25" y="-15.5" />
+      <point x="160.25" y="61.0" />
+      <point x="585.75" y="61.0" />
+      <point x="585.75" y="51.0" />
+      <point x="1006.625" y="51.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.PontoCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="DEPENDENCY">
+      <point x="-27.0" y="-15.5" />
+      <point x="564.0" y="143.0" />
+      <point x="585.75" y="143.0" />
+      <point x="585.75" y="51.0" />
+      <point x="1006.625" y="51.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.TrapezioCli" target="paint_AndrewOficial.View.Cli.AbstractCRUDCli" relationship="GENERALIZATION">
+      <point x="-31.75" y="-15.5" />
+      <point x="848.75" y="153.0" />
+      <point x="596.25" y="153.0" />
+      <point x="596.25" y="133.0" />
+      <point x="1328.75" y="133.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.CirculoCli" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="DEPENDENCY">
+      <point x="-28.75" y="-15.5" />
+      <point x="311.75" y="61.0" />
+      <point x="585.75" y="61.0" />
+      <point x="585.75" y="51.0" />
+      <point x="1006.625" y="51.0" />
+      <point x="-36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.MenuDesenhos" target="paint_AndrewOficial.View.Cli.MenuPrincipal" relationship="GENERALIZATION">
+      <point x="1.1368683772161603E-13" y="-15.5" />
+      <point x="1696.75" y="61.0" />
+      <point x="1522.25" y="61.0" />
+      <point x="1522.25" y="51.0" />
+      <point x="1079.625" y="51.0" />
+      <point x="36.5" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.PontoCli" target="paint_AndrewOficial.View.Cli.AbstractCRUDCli" relationship="GENERALIZATION">
+      <point x="27.0" y="-15.5" />
+      <point x="618.0" y="153.0" />
+      <point x="596.25" y="153.0" />
+      <point x="596.25" y="133.0" />
+      <point x="1328.75" y="133.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.QuadradoCli" target="paint_AndrewOficial.View.Cli.AbstractCRUDCli" relationship="GENERALIZATION">
+      <point x="-34.0" y="-15.5" />
+      <point x="998.0" y="153.0" />
+      <point x="596.25" y="153.0" />
+      <point x="596.25" y="133.0" />
+      <point x="1328.75" y="133.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.TextoCli" target="paint_AndrewOficial.View.Cli.AbstractCRUDCli" relationship="GENERALIZATION">
+      <point x="26.5" y="-15.5" />
+      <point x="79.5" y="153.0" />
+      <point x="596.25" y="153.0" />
+      <point x="596.25" y="133.0" />
+      <point x="1328.75" y="133.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="paint_AndrewOficial.View.Cli.TrianguloCli" target="paint_AndrewOficial.View.Cli.AbstractCRUDCli" relationship="GENERALIZATION">
+      <point x="-33.0" y="-15.5" />
+      <point x="698.0" y="153.0" />
+      <point x="596.25" y="153.0" />
+      <point x="596.25" y="133.0" />
+      <point x="1328.75" y="133.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.7376664056382146" showDependencies="true" x="628.5" y="134.5" />
+  <SelectedNodes>
+    <node>paint_AndrewOficial.View.Cli.Paint_Janela</node>
+    <node>paint_AndrewOficial.View.Cli.TextoCli</node>
+    <node>paint_AndrewOficial.View.Cli.TrapezioCli</node>
+    <node>paint_AndrewOficial.View.Cli.MenuDesenhos</node>
+    <node>paint_AndrewOficial.View.Cli.MenuQuadrado</node>
+    <node>paint_AndrewOficial.View.Cli.TrianguloCli</node>
+    <node>paint_AndrewOficial.View.Cli.PontoCli</node>
+    <node>paint_AndrewOficial.View.Cli.RetanguloCli</node>
+    <node>paint_AndrewOficial.View.Cli.MenuPrincipal</node>
+    <node>paint_AndrewOficial.View.Cli.RetaCli</node>
+    <node>paint_AndrewOficial.View.Cli.LosanguloCli</node>
+    <node>paint_AndrewOficial.View.Cli.AbstractCRUDCli</node>
+    <node>paint_AndrewOficial.View.Cli.QuadradoCli</node>
+    <node>paint_AndrewOficial.View.Cli.CirculoCli</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

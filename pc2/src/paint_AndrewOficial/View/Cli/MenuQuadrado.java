@@ -3,7 +3,18 @@ package paint_AndrewOficial.View.Cli;
 import paint_AndrewOficial.modelo.Quadrado1;
 
 public class MenuQuadrado extends MenuPrincipal {
-    protected int opcao,a ;
+    protected int opcao;
+    protected int a;
+
+    public int getB() {
+        return b;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+    }
+
+    protected int b;
 
     public int getA() {
         return a;
@@ -22,15 +33,20 @@ public class MenuQuadrado extends MenuPrincipal {
     }
 
 
-    public Quadrado1 CriarQuadrado(){
+    public Quadrado1 CriarQuadrado() {
         System.out.println("digite o lado do quadrado");
-        int lado=in.nextInt();
+        int lado = in.nextInt();
         Quadrado1 q1 = new Quadrado1(lado);
         return q1;
     }
-    public int receber(){
+
+    public int receber() {
         setA(in.nextInt());
         return getA();
     }
+    public int receberSim() {
+        setB(in.nextInt());
+        return getB();
     }
+}
 

@@ -4,7 +4,7 @@ import paint_AndrewOficial.View.gui.ICRUDFiguraView;
 import paint_AndrewOficial.modelo.Quadrado1;
 
 public class QuadradoCli extends AbstractCRUDCli<Quadrado1>
-            implements ICRUDFiguraView<Quadrado1> {
+        implements ICRUDFiguraView<Quadrado1> {
     @Override
     public void showMessage(String msg) {
 
@@ -38,7 +38,7 @@ public class QuadradoCli extends AbstractCRUDCli<Quadrado1>
     @Override
     public Quadrado1 create() {
         System.out.println("digite o lado do quadrado");
-        int lado=in.nextInt();
+        int lado = in.nextInt();
         Quadrado1 q1 = new Quadrado1(lado);
         return q1;
 

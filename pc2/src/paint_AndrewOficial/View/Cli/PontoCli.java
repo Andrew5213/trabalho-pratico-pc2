@@ -8,7 +8,6 @@ public class PontoCli extends AbstractCRUDCli<Ponto>
         implements ICRUDFiguraView<Ponto> {
 
 
-
     //@Override
     public Ponto create() {
         System.out.println("digite a coordenda x do ponto sendo ele  inteiro");
